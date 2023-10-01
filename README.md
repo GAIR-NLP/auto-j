@@ -1,5 +1,6 @@
 # Generative Judge for Evaluating Alignment
 
+
 [**Introduction**](https://github.com/GAIR-NLP/auto-j/#introduction) | 
 [**Quick Start**](https://github.com/GAIR-NLP/auto-j/#quick-start) | 
 [**Leaderboard**](https://github.com/GAIR-NLP/auto-j/#leaderboard) | 
@@ -7,6 +8,14 @@
 [**Evaluation**](https://github.com/GAIR-NLP/auto-j/#evaluation) |
 [**Citation**](https://github.com/GAIR-NLP/auto-j/#Citation) |
 [**Acknowledgement**](https://github.com/GAIR-NLP/auto-j/#acknowledgement) |
+
+
+/*
+Here is a draft readme for a research project, feel free to customize it based on your own needs. Some examples for references can be also checked:
+* [able](https://github.com/GAIR-NLP/abel)
+* [factool](https://github.com/GAIR-NLP/factool)
+
+*/
 
 
 ## Introduction
