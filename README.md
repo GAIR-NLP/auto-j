@@ -12,11 +12,11 @@ We develop **Auto-J**, a new open-source generative judge that can effectively e
 
 - **Interpretability**: Auto-J provides detailed natural language critiques that enhance the reliability of its evaluation outcomes and facilitate humans’ involvement in the evaluation loop.
 
-<img src="./figs/example_pairwise.PNG" style="zoom: 33%;" />
+<img src="./figs/example_pairwise.png" style="zoom: 33%;" />
 
 <center>Example 1: Compare a pair of responses for a query, with key factors to distinguish them and the final decision.</center>	
 
-<img src="./figs/example_single.PNG" style="zoom: 33%;" />
+<img src="./figs/example_single.png" style="zoom: 33%;" />
 
 <center>Example 2: Evaluate a single response for a query, with critiques and an overall rating.</center>
 
@@ -128,7 +128,7 @@ Our training data covers a wide range of real-world scenarios, and mostly comes 
 
 An overview of data construction pipeline is as follows (Please refer to our paper for more details):
 
-<img src="./figs/data_collection_pipeline.PNG" style="zoom:50%;" />
+<img src="./figs/data_collection_pipeline.png" style="zoom:50%;" />
 
 #### Pairwise part
 
@@ -325,7 +325,7 @@ where the fields are:
 
 </details>
 
-<img src="figs/rating_performance.PNG" style="zoom:50%;" />
+<img src="figs/rating_performance.png" style="zoom:50%;" />
 
 ## Other Resources
 
