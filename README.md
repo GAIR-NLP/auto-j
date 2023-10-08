@@ -132,7 +132,7 @@ An overview of data construction pipeline is as follows (Please refer to our pap
 
 #### Pairwise part
 
-The pairwise part of training data is in [pairwise_traindata.jsonl](data/pairwise_traindata.jsonl), which is a reformatted version of GPT-4's raw outputs. It has 3,436 samples, and each line is a python dict with the following format:
+The pairwise part of training data is in [pairwise_traindata.jsonl](data/training/pairwise_traindata.jsonl), which is a reformatted version of GPT-4's raw outputs. It has 3,436 samples, and each line is a python dict with the following format:
 
 <details>
 <summary>Format for pairwise training data</summary>
@@ -163,7 +163,7 @@ Note that for certain scenarios (the exam group) that needs reasoning, we ask th
 
 #### Single-response part
 
-The single response part of training data is in  [single_traindata.jsonl](data/single_traindata.jsonl), which is the combined from two independent critiques for a response (with and without scenario criteria as reference in evaluation). It has 960 samples,, and each line is a python dict with the following format:
+The single response part of training data is in  [single_traindata.jsonl](data/training/single_traindata.jsonl), which is the combined from two independent critiques for a response (with and without scenario criteria as reference in evaluation). It has 960 samples,, and each line is a python dict with the following format:
 
 <details>
 <summary>Format for single-response training data</summary>
@@ -190,7 +190,7 @@ where the fields are:
 
 **Independent critiques**
 
-We also release the two independent critiques in [noscenario.jsonl](data/single_independent/noscenario.jsonl) (without scenario criteria) and [usescenario.jsonl](data/single_independent/usescenario.jsonl) (with scenario criteria) (refer to our paper for more details). Each line in these two files looks like:
+We also release the two independent critiques in [noscenario.jsonl](data/training/single_independent/noscenario.jsonl) (without scenario criteria) and [usescenario.jsonl](data/training/single_independent/usescenario.jsonl) (with scenario criteria) (refer to our paper for more details). Each line in these two files looks like:
 
 <details>
 <summary>Format for independent critiques before combinition</summary>
@@ -227,7 +227,7 @@ We release the test data for the three meta-evaluation tasks introduced in our p
 
 #### Pairwise response comparison
 
-We collect $58\times24=1392$ samples for pairwise response comparison task (24 pairs for each scenario). The data is in [testdata_pairwise.jsonl](data/testdata_pairwise.jsonl). Each line of this file is as follows:
+We collect $58\times24=1392$ samples for pairwise response comparison task (24 pairs for each scenario). The data is in [testdata_pairwise.jsonl](data/test/testdata_pairwise.jsonl). Each line of this file is as follows:
 
 <details>
 <summary>Format</summary>    
@@ -255,7 +255,7 @@ where the fields are:
 
 #### Critique generation
 
-Based on the data of pairwise response comparison, we construct the data for critique generation task. Specifically, we sample 4 out of the 24 samples for each scenario ($58\times4=232$ samples in total), and pick the less preferred response to be criticized. We also provide the critiques by Auto-J. The data is in [testdata_critique.jsonl](data/testdata_critique.jsonl). Each line of this file is as follows:
+Based on the data of pairwise response comparison, we construct the data for critique generation task. Specifically, we sample 4 out of the 24 samples for each scenario ($58\times4=232$ samples in total), and pick the less preferred response to be criticized. We also provide the critiques by Auto-J. The data is in [testdata_critique.jsonl](data/test/testdata_critique.jsonl). Each line of this file is as follows:
 
 <details>
     <summary>Format</summary>
@@ -286,7 +286,7 @@ where the fields are:
 
 Based on the data for critique generation task, we construct the data for critique generation task. Specifically, we sample 2 out of the 4 queries for each scenario ($58\times2=116$ samples in total). For each query, we use a base model to generate 32 responses through uniform sampling. 
 
-In our paper we adopt two base models, Vicuna-7B-v1.5 and LLaMA-7B-chat, to generate these responses. The data is in [testdata_selection.jsonl](data/testdata_selection.jsonl), and we also provide the rating for each response by Auto-J in this file. Each line of this file is as follows:
+In our paper we adopt two base models, Vicuna-7B-v1.5 and LLaMA-7B-chat, to generate these responses. The data is in [testdata_selection.jsonl](data/test/testdata_selection.jsonl), and we also provide the rating for each response by Auto-J in this file. Each line of this file is as follows:
 
 <details>
     <summary>Format</summary>
