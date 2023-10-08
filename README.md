@@ -132,7 +132,7 @@ An overview of data construction pipeline is as follows (Please refer to our pap
 
 #### Pairwise part
 
-The pairwise part of training data is in [pairwise_traindata.jsonl](data\training\pairwise_traindata.jsonl), which is a reformatted version of GPT-4's raw outputs. It has 3,436 samples, and each line is a python dict with the following format:
+The pairwise part of training data is in [pairwise_traindata.jsonl](data/training/pairwise_traindata.jsonl), which is a reformatted version of GPT-4's raw outputs. It has 3,436 samples, and each line is a python dict with the following format:
 
 <details>
 <summary>Format for pairwise training data</summary>
@@ -163,7 +163,7 @@ Note that for certain scenarios (the exam group) that needs reasoning, we ask th
 
 #### Single-response part
 
-The single response part of training data is in  [single_traindata.jsonl](data\training\single_traindata.jsonl), which is the combined from two independent critiques for a response (with and without scenario criteria as reference in evaluation). It has 960 samples,, and each line is a python dict with the following format:
+The single response part of training data is in  [single_traindata.jsonl](data/training/single_traindata.jsonl), which is the combined from two independent critiques for a response (with and without scenario criteria as reference in evaluation). It has 960 samples,, and each line is a python dict with the following format:
 
 <details>
 <summary>Format for single-response training data</summary>
@@ -190,7 +190,7 @@ where the fields are:
 
 **Independent critiques**
 
-We also release the two independent critiques in [noscenario.jsonl](data\training\single_independent\noscenario.jsonl) (without scenario criteria) and  [usescenario.jsonl](data\training\single_independent\usescenario.jsonl) (with scenario criteria) (refer to our paper for more details). Each line in these two files looks like:
+We also release the two independent critiques in [noscenario.jsonl](data/training/single_independent/noscenario.jsonl) (without scenario criteria) and  [usescenario.jsonl](data/training/single_independent/usescenario.jsonl) (with scenario criteria) (refer to our paper for more details). Each line in these two files looks like:
 
 <details>
 <summary>Format for independent critiques before combinition</summary>
@@ -227,7 +227,7 @@ We release the test data for the three meta-evaluation tasks introduced in our p
 
 #### Pairwise response comparison
 
-We collect $58\times24=1392$ samples for pairwise response comparison task (24 pairs for each scenario). The data is in  [testdata_pairwise.jsonl](data\test\testdata_pairwise.jsonl). Each line of this file is as follows:
+We collect $58\times24=1392$ samples for pairwise response comparison task (24 pairs for each scenario). The data is in  [testdata_pairwise.jsonl](data/test/testdata_pairwise.jsonl). Each line of this file is as follows:
 
 <details>
 <summary>Format</summary>    
@@ -251,11 +251,11 @@ where the fields are:
 
 </details>
 
-<img src="D:\GAIR\release\auto-j\figs\pairwise_performance.png" style="zoom:50%;" />
+<img src="figs/pairwise_performance.png" style="zoom:50%;" />
 
 #### Critique generation
 
-Based on the data of pairwise response comparison, we construct the data for critique generation task. Specifically, we sample 4 out of the 24 samples for each scenario ($58\times4=232$ samples in total), and pick the less preferred response to be criticized. We also provide the critiques by Auto-J. The data is in  [testdata_critique.jsonl](data\test\testdata_critique.jsonl). Each line of this file is as follows:
+Based on the data of pairwise response comparison, we construct the data for critique generation task. Specifically, we sample 4 out of the 24 samples for each scenario ($58\times4=232$ samples in total), and pick the less preferred response to be criticized. We also provide the critiques by Auto-J. The data is in  [testdata_critique.jsonl](data/test/testdata_critique.jsonl). Each line of this file is as follows:
 
 <details>
     <summary>Format</summary>
@@ -280,13 +280,13 @@ where the fields are:
 
 </details>
 
-<img src="D:\GAIR\release\auto-j\figs\critique_performance.png" style="zoom:50%;" />
+<img src="figs/critique_performance.png" style="zoom:50%;" />
 
 #### Best-of-$N$ selection
 
 Based on the data for critique generation task, we construct the data for critique generation task. Specifically, we sample 2 out of the 4 queries for each scenario ($58\times2=116$ samples in total). For each query, we use a base model to generate 32 responses through uniform sampling. 
 
-In our paper we adopt two base models, Vicuna-7B-v1.5 and LLaMA-7B-chat, to generate these responses. The data is in  [testdata_selection.jsonl](data\test\testdata_selection.jsonl), and we also provide the rating for each response by Auto-J in this file. Each line of this file is as follows:
+In our paper we adopt two base models, Vicuna-7B-v1.5 and LLaMA-7B-chat, to generate these responses. The data is in  [testdata_selection.jsonl](data/test/testdata_selection.jsonl), and we also provide the rating for each response by Auto-J in this file. Each line of this file is as follows:
 
 <details>
     <summary>Format</summary>
@@ -325,7 +325,7 @@ where the fields are:
 
 </details>
 
-<img src="D:\GAIR\release\auto-j\figs\rating_performance.PNG" style="zoom:50%;" />
+<img src="figs/rating_performance.PNG" style="zoom:50%;" />
 
 ## Other Resources
 
@@ -335,13 +335,13 @@ One major part of data construction is the definition for different scenarios an
 
 #### Definition
 
-The definition of each scenario can be found in [constants.py](other_resources\constants.py).
+The definition of each scenario can be found in [constants.py](other_resources/constants.py).
 
 #### Criteria
 
 We manually design criteria for each scenario to guide GPT-4 to generate more comprehensive judgements.
 
-These criteria can be found in [specials](other_resources\scenario_criteria\specials). The set of criteria for a scenario is organized as a `yaml` file (the following is the criteria for `planning` scenario), where each criterion consists of the name, description, weight (aborted), and type (basic, content, format or style):
+These criteria can be found in [specials](other_resources/scenario_criteria/specials). The set of criteria for a scenario is organized as a `yaml` file (the following is the criteria for `planning` scenario), where each criterion consists of the name, description, weight (aborted), and type (basic, content, format or style):
 
 <details>
     <summary>The complete criteria for "planning" scenario.</summary>
@@ -413,7 +413,7 @@ user intention inference:
 
 </details>
 
-More basic criteria (like the basic criteria for coding, exam, etc.) can be found in [basics](other_resources\scenario_criteria\basics).
+More basic criteria (like the basic criteria for coding, exam, etc.) can be found in [basics](other_resources/scenario_criteria/basics).
 
 The yaml files can be loaded as follows (execute under `./`):
 
@@ -474,7 +474,7 @@ print(scenario) # should be `code_generation`.
 
 We release the involved data in training and testing the scenario classifier.
 
-The training data is in [traindata.jsonl](other_resources\scenario_classifier_data\traindata.jsonl). The format is as follows:
+The training data is in [traindata.jsonl](other_resources/scenario_classifier_data/traindata.jsonl). The format is as follows:
 
 ```python
 {
@@ -485,7 +485,7 @@ The training data is in [traindata.jsonl](other_resources\scenario_classifier_da
 
 The complete query is `instruction+" "+input`, and `category` stands for the scenario of this query.
 
-The test data is in [testdata.jsonl](other_resources\scenario_classifier_data\testdata.jsonl) with a similar format as the training data.
+The test data is in [testdata.jsonl](other_resources/scenario_classifier_data/testdata.jsonl) with a similar format as the training data.
 
 ## Citation
 
