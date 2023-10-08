@@ -1,0 +1,25 @@
+extended:
+  essence:
+    content: The summary should be a good representation of the post.
+    weight: 5
+    type: content
+  clarity:
+    content: The summary should be reader-friendly, and expresses ideas clearly.
+    weight: 5
+    type: content
+  accuracy:
+    content: The summary should contain the same information as the longer post.
+    weight: 5
+    type: content
+  purpose:
+    content: The summary should serve the same purpose as the original post.
+    weight: 4
+    type: content
+  concise:
+    content: The summary should be short and to-the-point.
+    weight: 3
+    type: content
+  style:
+    content: The summary should written in the same style as the original post.
+    weight: 2
+    type: style

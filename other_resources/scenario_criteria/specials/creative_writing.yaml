@@ -1,0 +1,40 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  characters:
+    content: The written text should feature well-developed and engaging characters that are believable, relatable, and contribute to the overall narrative or theme.
+    weight: 5
+    type: content
+  plots:
+    content: The written text should have a compelling and well-structured plot that engages the reader, progresses logically, and includes conflict, rising action, climax, and resolution.
+    weight: 5
+    type: content
+  settings:
+    content: The written text should vividly describe the settings, creating a sense of time, place, atmosphere, and adding depth to the narrative.
+    weight: 4
+    type: content
+  conflicts:
+    content: The written text should incorporate conflicts that create tension, drive the story forward, and provide opportunities for character development and resolution.
+    weight: 5
+    type: content
+  theme:
+    content: The written text should explore and convey a clear and meaningful theme or message that resonates with the reader.
+    weight: 5
+    type: content
+  vivid:
+    content: The written text should be vivid, with rich details and descriptions that engage the reader’s senses and imagination.
+    weight: 5
+    type: content
+  genre:
+    content: The written text should follow the genre of the writing task. The written text should match the genre’s purpose, structure, style, tone, rhyme, and language. If not specified, you can choose a proper genre by yourself.
+    weight: 5
+    type: format
+  tone:
+    content: The written text should adopt an appropriate tone for the writing task. The written text should suit the tone’s level of formality, politeness, seriousness, etc.
+    weight: 3
+    type: style
+  writing style:
+    content: If a specific writing style is declared, you should follow it by using proper words, sentences, quotes, terms and so on.
+    weight: 4
+    type: style

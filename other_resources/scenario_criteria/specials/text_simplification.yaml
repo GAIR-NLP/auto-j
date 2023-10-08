@@ -1,0 +1,24 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  coverage:
+    content: The written text should cover all information mentioned in the text.
+    weight: 5
+    type: content
+  accuracy:
+    content: The generated text should be accurate, with no misleading, misrepresenting, or non-existent information.
+    weight: 5
+    type: content
+  conciseness:
+    content: The written text should be concise, with no redundant or unnecessary information. It should be as short as possible while still covering all information mentioned in the text.
+    weight: 4
+    type: content
+  simplification:
+    content: Complex or specialized vocabulary in the original text should be appropriately replaced with simpler and more common words or phrases, without altering the intended message. Complex sentence structures in the original text should be simplified into shorter and more straightforward sentences while preserving the logical flow and coherence of the ideas.
+    weight: 5
+    type: content
+  structure:
+    content: The simplified text should be readable, with appropriate sentence length, paragraph breaks, and organization to facilitate ease of reading and comprehension.
+    weight: 2
+    type: format

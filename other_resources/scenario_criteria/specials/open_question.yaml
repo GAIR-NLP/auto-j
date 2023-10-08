@@ -1,0 +1,28 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  accuracy:
+    content: The written answer should answer the given question accurately without errors.
+    weight: 5
+    type: content
+  professional:
+    content: The written text should be professional, meaning that it should use precise language and industry-specific terminology where appropriate.
+    weight: 2
+    type: style
+  citation:
+    content: The written text is encouraged to cite official documents, links, references, statistics, research or other credible sources when possible.
+    weight: 2
+    type: content
+  structure:
+    content: The written text should first give a brief summary of your answer, followed by a detailed explanation.
+    weight: 4
+    type: format
+  layout:
+    content: The written text is encouraged to use headings, bullet points, lists, tables, or other devices to enhance readability.
+    weight: 3
+    type: format
+  admit uncertainty:
+    content: If you are uncertain or unfamiliar with the user's query, you should express this uncertainty and ask for more information for clarification.
+    weight: 3
+    type: content

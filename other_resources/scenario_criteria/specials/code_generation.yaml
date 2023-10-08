@@ -1,0 +1,2 @@
+basic-coding:
+  !include "./other_resources/scenario_criteria/basics/basic_coding.yaml"

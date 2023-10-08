@@ -1,0 +1,24 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  coverage:
+    content: The written text should accurately convey the information and intention from the original text or topic without distorting the meaning or context, nor adding any new information or intention not present in the original text or topic. This criterion is not applicable if the user only wants to rewrite a part of the text.
+    weight: 5
+    type: content
+  genre:
+    content: The written text should follow the genre of the rewriting task. The written text should match the genre’s purpose, structure, style, tone, and language. If not specified, you can choose a proper genre by yourself.
+    weight: 4
+    type: format
+  tone:
+    content: The written text should adopt an appropriate tone for the rewriting task. The written text should suit the tone’s level of formality, politeness, seriousness, etc.
+    weight: 3
+    type: style
+  style:
+    content: If a specific writing style is declared, you should follow it by using proper words, sentences, quotes, terms and so on.
+    weight: 4
+    type: style
+  instruction:
+    content: The written text should strictly follow the instruction, like writing in third person. Failure to follow the constraints will be severely penalized (e.g. rated as low score), even if the written text is otherwise good.
+    weight: 5
+    type: content

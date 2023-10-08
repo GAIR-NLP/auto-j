@@ -1,0 +1,24 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  accuracy:
+    content: The ranking order should accurately reflect the specified criterion.
+    weight: 5
+    type: content
+  coverage:
+    content: All relevant items should be included in the ranking result, without any significant omissions or exclusions. This criterion is not applicable if the user do not provide an explicit list of items to be ranked. This criterion is also not applicable if the user ask you to remove certain items from the ranking result.
+    weight: 4
+    type: content
+  faithfulness:
+    content: Do not add new item or new text index for the ranking results. This criterion is not applicable if the user do not provide an explicit list of items to be ranked.
+    weight: 4
+    type: content
+  conciseness:
+    content: Instead of copying all text content for an item, utilize appropriate text notation to convey the essential information if the length of an item is too long. This criterion is not applicable if the user do not provide an explicit list of items to be ranked.
+    weight: 2
+    type: content
+  structure:
+    content: A good practice is to first give your ranking results, then followed by a detailed explanation. You can use  headings, bullet points, lists, tables, or other devices to enhance readability and coherence.
+    weight: 3
+    type: format

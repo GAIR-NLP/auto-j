@@ -1,0 +1,27 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+extended:
+  accuracy:
+    content: The written text should accurately classify or identify the given objects into the specific categories.
+    weight: 5
+    type: content
+  coverage:
+    content: If the range of classification or identification is given by the user, the assigned categories should be exactly in the specified categories. This criterion is not applicable if the user do not explicitly require a specific range.
+    weight: 5
+    type: content
+  pointing out:
+    content: If the classification or identification results are not trivial, the written text should point out the reasons and explain why instead of just giving the results.
+    weight: 3
+    type: content
+  result at the beginning:
+    content: A good practice is to first give your classification results, then followed by detailed explanations.
+    weight: 3
+    type: format
+  layout:
+    content: You are encouraged to use headings, bullet points, lists, tables, or other devices to enhance readability and coherence.
+    weight: 3
+    type: format
+  marginal case handling:
+    content: The classification or identification results should be able to handle marginal cases, like there are multiple possible categories for an object, or the object is not in any category. In those cases, the written text should point it out and explain the reasons.
+    weight: 2
+    type: content

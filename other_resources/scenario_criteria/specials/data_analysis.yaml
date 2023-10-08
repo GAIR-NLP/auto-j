@@ -1,0 +1,16 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  accuracy:
+    content: The analysis towards the data should be accurate and consistent with the original data.
+    weight: 5
+    type: content
+  pattern recognition:
+    content: If no specific requirements are given, the analysis should identify the patterns, trends, and relationships within the data, and look for correlations and causal links between different elements. This criterion is not applicable if the user only asks for a specific aspect of the data.
+    weight: 3
+    type: content
+  multiple aspects:
+    content: The analysis towards the data should cover multiple aspects of the data, rather than only focusing on a single aspect. This criterion is not applicable if the user only asks for a specific aspect of the data.
+    weight: 3
+    type: content

@@ -1,0 +1,20 @@
+math operation correctness:
+  content: Numerical and algebraic operations should be precise and accurate, and theorems and formulas should be correctly applied.
+  weight: 5
+  type: basic
+step by step explanation:
+  content: The calculation process should be explained step by step, with each step clearly described and justified the used formulas, theorems, variables, mathematical symbols and so on.
+  weight: 4
+  type: basic
+notation:
+  content: The written answer should utilize proper notation and formula representation, following the conventions specific to the subject matter. The notation should be consistent.
+  weight: 3
+  type: basic
+formula formatting:
+  content: Properly format equations and formulas with clear alignment, appropriate spacing, and consistent use of parentheses, brackets, and mathematical symbols. Label or number equations and formulas for easy reference and cross-referencing within the solution.
+  weight: 3
+  type: basic
+logic:
+  content: The calculation process should be logically coherent and consistent.
+  weight: 3
+  type: basic

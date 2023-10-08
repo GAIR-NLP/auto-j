@@ -1,0 +1,2 @@
+basic-mathematics:
+  !include "./other_resources/scenario_criteria/basics/basic_mathematics.yaml"

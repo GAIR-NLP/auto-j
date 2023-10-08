@@ -1,0 +1,44 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  benefits:
+    content: The product's benefits should be clearly and effectively explained, addressing how the product can solve a problem or improve the buyer's life. Make sure to focus on the value proposition.
+    weight: 5
+    type: content
+  specificity:
+    content: The written description should specify key features and unique selling points of the product. Avoid generic descriptions. For example, instead of "High-quality laptop," use "High-performance laptop with a fast processor and long battery life." Highlight what sets the product apart from its competitors.
+    weight: 5
+    type: content
+  target:
+    content: The written description should be tailored to the product's target audience. The text should address their needs, interests, and preferences.
+    weight: 4
+    type: content
+  details:
+    content: The written description should include key product details, such as what it is, how it works, what it's made of, or who it's for. Any unique features should be highlighted.
+    weight: 3
+    type: content
+  accuracy:
+    content: Ensure all the information about the product is accurate. Misleading descriptions will not only result in low ratings, but can also violate consumer laws.
+    weight: 2
+    type: content
+  structure:
+    content: The written description should have a clear structure. It should start with a captivating introduction, followed by an informative body, and end with a compelling closing statement or call to action.
+    weight: 5
+    type: format
+  tone:
+    content: The tone of The written description should match the brand voice and target audience. This could be formal, casual, humorous, serious, etc.
+    weight: 4
+    type: style
+  persuasion:
+    content: Use persuasive language to encourage purchase, but avoid exaggeration or overpromising.
+    weight: 4
+    type: style
+  readability:
+    content: The written description should be easy to read, using simple language and short sentences when possible. Make use of bullet points and subheadings to break up the text.
+    weight: 3
+    type: format
+  length:
+    content: The written description should be concise and to the point. Avoid unnecessary jargon and fluff. Aim to convey the most information in the fewest words.
+    weight: 3
+    type: format

@@ -1,0 +1,28 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  accuracy:
+    content: The verification and other contents provided or mentioned in the response should be correct, without any errors or false information.
+    weight: 5
+    type: content
+  professional:
+    content: The verification should be professional, meaning that it should use precise language and industry-specific terminology where appropriate.
+    weight: 2
+    type: style
+  citation:
+    content: The verification is encouraged to cite official documents, links, references, statistics, research or other credible sources when possible.
+    weight: 2
+    type: content
+  pointing out:
+    content: If there are flaws in the given fact, the written text should point out the flaws, what kind of flaws are they (e.g., out-of-date, misunderstanding, errors etc.), explain the reasons and give correction.
+    weight: 3
+    type: content
+  structure:
+    content: A good practice is to first give a brief summary of your answer, followed by a detailed explanation.
+    weight: 4
+    type: format
+  layout:
+    content: The written text are encouraged to use  headings, bullet points, lists, tables, or other devices to enhance readability.
+    weight: 3
+    type: format

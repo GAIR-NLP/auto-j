@@ -1,0 +1,28 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  accuracy:
+    content: Ensure the steps are accurate and can lead to a successful completion of the recipe. Incorrect steps or omission of crucial steps will lead to unsuccessful cooking attempts.
+    weight: 5
+    type: content
+  creativity:
+    content: The recipe should be unique and interesting. Try to add personal touches or unusual combinations to make the recipe stand out.
+    weight: 2
+    type: content
+  nutrition:
+    content: If possible, include the nutritional content of the recipe, such as calories, fat, protein, and carbohydrate content.
+    weight: 1
+    type: content
+  structure:
+    content: "The recipe is encouraged to follow the standard recipe structure: title, ingredients list, equipment needed, cooking instructions, serving size, and cooking time. There should be clear divisions between these sections."
+    weight: 5
+    type: format
+  language:
+    content: Use imperative mood when writing cooking instructions ("Stir the mixture", "Preheat the oven"). Avoid lengthy sentences and ensure the language is concise and clear.
+    weight: 4
+    type: style
+  visuals:
+    content: If possible, include relevant visuals such as images or diagrams that illustrate a complex step or the final dish. Ensure these visuals are correctly captioned and formatted.
+    weight: 3
+    type: format

@@ -1,0 +1,24 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  accuracy:
+    content: The generated topics should accurately capture the main themes and concepts present in the documents.
+    weight: 5
+    type: content
+  coherence:
+    content: The topics should be coherent, meaning that the words within each topic should be semantically related and provide a meaningful representation of the underlying theme.
+    weight: 5
+    type: content
+  conciseness:
+    content: The words within each topic should be concise and to the point, with a minimal number of words. Only the most important topics should be generated.
+    weight: 3
+    type: content
+  diversity:
+    content: The generated topics should have significant differences among them, avoiding large overlap or redundancy.
+    weight: 3
+    type: content
+  structure:
+    content: The written text should have a nice format and structure, meaning that it should be well-organized and easy to read. It should also use  headings, bullet points, lists, tables, or other devices to enhance readability and coherence.
+    weight: 4
+    type: format

@@ -1,0 +1,16 @@
+basic-coding:
+  !include "./other_resources/scenario_criteria/basics/basic_coding.yaml"
+
+extended:
+  coverage:
+    content: The written code should accurately convey the information, intention, functionality and behavior from the original code without omitting any of them or adding new ones unless necessary. This criterion is not applicable if the user only wants to correct/rewrite a part of the code.
+    weight: 5
+    type: content
+  pointing out:
+    content: The written code should point out which parts the correction/change are made, how the correction/change is made and the reason for the correction/change instead of only returning the corrected/changed code.
+    weight: 4
+    type: content
+  instruction following:
+    content: The corrected/rewritten code should follow the instructions given by the user. This criterion is not applicable if the user does not provide specific instructions for correcting, rewriting or refactoring the code.
+    weight: 5
+    type: content

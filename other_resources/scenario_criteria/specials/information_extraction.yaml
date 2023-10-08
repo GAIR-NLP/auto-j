@@ -1,0 +1,20 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  coverage:
+    content: The written text should cover 1) all categories of information specified by the user, and 2) for each category, all entities of this category in the text.
+    weight: 5
+    type: content
+  accuracy:
+    content: The extracted entities should be accurate, with no omitted, misclassified, misidentified or non-existent entities. The extracted entities should be exactly the same as the entities in the text. Exceptions can be made only when there are specials requirements clearly stated.
+    weight: 5
+    type: content
+  structure:
+    content: The written text should have a nice format and structure, meaning that it should be well-organized and easy to read.
+    weight: 4
+    type: format
+  layout:
+    content: The written text is encouraged to use headings, bullet points, lists, tables, or other devices to enhance readability.
+    weight: 4
+    type: format

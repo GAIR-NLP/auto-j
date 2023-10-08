@@ -1,0 +1,27 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+basic-bot:
+  !include "./other_resources/scenario_criteria/basics/basic_bot.yaml"
+
+extended:
+  professional:
+    content: The written text should be professional, meaning that it should use precise language and industry-specific terminology where appropriate.
+    weight: 2
+    type: style
+  citation:
+    content: The written text is encouraged to cite official documents, links, references, statistics, research or other credible sources when possible.
+    weight: 2
+    type: content
+  clarity:
+    content: The written text should be clear, easily understandable and easy to follow, using concise and straightforward language. It should avoid technical jargon or complex terminology, unless necessary and accompanied by clear explanations.
+    weight: 5
+    type: content
+  logical steps:
+    content: The written text should present instructions in a logical sequence, breaking down complex tasks into manageable steps. It should provide a clear overview or introduction, followed by a step-by-step guide, and conclude with a summary or concluding remarks.
+    weight: 4
+    type: format
+  layout:
+    content: The written text is encouraged to use headings, bullet points, lists, tables, or other devices to enhance readability.
+    weight: 3
+    type: format

@@ -1,0 +1,24 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  core idea capturing:
+    content: The written summary should effectively capture and convey all and only the core ideas from its source text.
+    weight: 5
+    type: content
+  faithfulness to source text:
+    content: All information conveyed in the written summary should be faithful to the source text. Do not introduce any fabricated content that is not present in the source text. Missing information should not be considered in this criterion.
+    weight: 5
+    type: content
+  semantic content coverage:
+    content: The written summary should comprehensively cover the semantic content units from the reference text, ensuring a thorough representation.
+    weight: 4
+    type: content
+  conciseness:
+    content: The written summary should be as brief and concise as possible.
+    weight: 3
+    type: content
+  layout:
+    content: The written summary are encouraged to follow a clear and well-organized layout. You may use headings, bullet points, lists, tables, or other formatting devices to improve readability. This criterion is not applicable if the user do not explicitly require a specific layout.
+    weight: 2
+    type: format

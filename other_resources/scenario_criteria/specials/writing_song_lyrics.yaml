@@ -1,0 +1,36 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  originality:
+    content: The lyrics should be original and creative, avoiding cliches and common phrases, unless they are being used deliberately for effect.
+    weight: 5
+    type: content
+  emotion:
+    content: The lyrics should convey clear and strong emotions that resonate with the listener. Whether it's love, joy, sadness, or anger, the lyrics should allow the listener to connect on an emotional level.
+    weight: 5
+    type: content
+  theme:
+    content: The lyrics should have a central theme or subject matter that's clear and consistent throughout the song. For example, if the song is about a romantic breakup, all the verses and choruses should reinforce and reflect on this theme.
+    weight: 4
+    type: content
+  imagery:
+    content: Use of vivid and imaginative language to create strong mental images is encouraged.
+    weight: 3
+    type: content
+  hook:
+    content: The lyrics should include a catchy hook or chorus that is memorable and reinforces the song's theme.
+    weight: 3
+    type: content
+  structure:
+    content: The lyrics should have a clear structure, typically including verses, a chorus, and potentially a bridge. The format can vary depending on the song style.
+    weight: 5
+    type: format
+  rhythm:
+    content: The lyrics should have a rhythmic quality that matches the melody of the song. This includes the number of syllables per line, the pattern of stressed and unstressed syllables, and the overall flow of the lyrics.
+    weight: 4
+    type: format
+  language style:
+    content: The language style should match the genre and mood of the song. For instance, pop songs might use simpler, more direct language, while folk songs might use more poetic or symbolic language.
+    weight: 3
+    type: style

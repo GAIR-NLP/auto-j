@@ -1,0 +1,40 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  objectivity:
+    content: The written news article should present the information in an unbiased manner, reporting the facts without introducing personal opinions or biases. This criterion is not applicable if the user ask you to write from a particular standpoint.
+    weight: 5
+    type: content
+  timeliness:
+    content: The written news article should discuss recent events or topics. It should be timely and relevant to the current situation or period.
+    weight: 5
+    type: content
+  accuracy:
+    content: The written news article must be accurate, with no distortion of the truth. Check the facts before writing them and use reliable sources. Any inaccuracies will lead to a lower score. This criterion is not applicable if the user ask you to write a fictional news article.
+    weight: 5
+    type: content
+  depth:
+    content: The written news article should provide sufficient depth, including background, context, and details, to allow the reader to fully understand the event or issue.
+    weight: 4
+    type: content
+  headline:
+    content: The news article should have a concise, engaging headline that accurately represents the content.
+    weight: 5
+    type: format
+  structure:
+    content: The news article should follow the 'inverted pyramid' structure, with the most important information first, followed by supporting details, and then background information.
+    weight: 5
+    type: format
+  source citation:
+    content: Any information, quotes, or data not common knowledge should be appropriately sourced.
+    weight: 4
+    type: format
+  tone:
+    content: The news article should adhere to journalistic writing style, using clear, concise, and straightforward language.
+    weight: 4
+    type: style
+  paragraphing:
+    content: Each paragraph should be focused on a single idea or detail to keep the article clear and easily readable.
+    weight: 3
+    type: format

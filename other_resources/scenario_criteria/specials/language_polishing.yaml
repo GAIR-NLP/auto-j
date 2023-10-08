@@ -1,0 +1,32 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  coverage:
+    content: The written text should accurately convey the information from the original text without distorting the meaning or context, nor adding any new information not present in the original text. This criterion is not applicable if the user only wants to polish a part of the text.
+    weight: 5
+    type: content
+  coherence:
+    content: The written text should exhibit logical connections between sentences and paragraphs, ensuring smooth transitions and flow of ideas.
+    weight: 5
+    type: content
+  conciseness:
+    content: The written text should strive for brevity and clarity, avoiding unnecessary repetitions, wordiness, or redundancy.
+    weight: 3
+    type: content
+  pointing out:
+    content: The written text should also point out which parts of the original text need to be improved and how to improve them instead of only returning the polished text.
+    weight: 3
+    type: content
+  fluency:
+    content: The written text should be fluent and natural, using appropriate sentence structures, idiomatic expressions, and phrasing to enhance readability.
+    weight: 5
+    type: content
+  readability:
+    content: The written text should be easily readable and comprehensible, targeting the intended audience and avoiding overly complex language or excessive technical jargon.
+    weight: 5
+    type: content
+  paragraphing:
+    content: The written text should utilize appropriate paragraph breaks, grouping related information and ideas together for improved readability and organization.
+    weight: 2
+    type: format

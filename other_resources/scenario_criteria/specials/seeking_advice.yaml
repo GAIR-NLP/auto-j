@@ -1,0 +1,23 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+basic-bot:
+  !include "./other_resources/scenario_criteria/basics/basic_bot.yaml"
+
+extended:
+  professional:
+    content: The written text should be professional, meaning that it should use precise language and industry-specific terminology where appropriate.
+    weight: 3
+    type: style
+  citation:
+    content: The written text is encouraged to cite official documents, links, references, statistics, research or other credible sources when possible.
+    weight: 2
+    type: content
+  structure:
+    content: The written text should start with a brief summary or suggestion, followed by some key points, and finally are more detailed explanations.
+    weight: 4
+    type: format
+  layout:
+    content: The written text is encouraged to use  headings, bullet points, lists, tables, or other devices to enhance readability.
+    weight: 3
+    type: format

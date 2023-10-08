@@ -1,0 +1,20 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  coverage:
+    content: The written note should cover all key points mentioned in the text or the given topic with no important information omitted. Completeness is more important than conciseness.
+    weight: 5
+    type: content
+  accuracy:
+    content: The written note should be accurate, with no misleading, misrepresenting, or non-existent information.
+    weight: 5
+    type: content
+  structure:
+    content: The written note should have a nice format and structure, meaning that it should be well-organized and easy to read.
+    weight: 5
+    type: format
+  layout:
+    content: The written note should use headings, bullet points, lists, tables, or other devices to enhance readability.
+    weight: 5
+    type: format

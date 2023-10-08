@@ -1,0 +1,20 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  accuracy:
+    content: The written answer should answer the given question accurately without errors based on the given context, even if the information in the context is incorrect or outdated.
+    weight: 5
+    type: content
+  evidence:
+    content: Besides the answer itself, the written text should also contain how to derive the answer from the given context. You should quote the corresponding text spans from the context as evidence and organize them and explain in a logical order.
+    weight: 4
+    type: content
+  correction:
+    content: It is acceptable to have a wrong or out-of-date answer to the question when the given context itself is wrong or out-of-date as long as they are consistent. However, you should also provide a correction and give the right answer, with appropriate explanations, references, sources or links.
+    weight: 3
+    type: content
+  structure:
+    content: A good practice is to first give a brief summarization of your answer, followed by a detailed explanation of how you get the answer from the context.
+    weight: 4
+    type: format

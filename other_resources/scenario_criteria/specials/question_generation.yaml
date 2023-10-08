@@ -1,0 +1,24 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  relevance to topic/text:
+    content: If you question is based on an attached text, you need to make sure the answer can be derived from the text. If you question is based on a topic, you need to make sure the answer is relevant to the topic.
+    weight: 5
+    type: content
+  clarity:
+    content: The written questions should be clear and understandable, avoiding ambiguity or confusion in their wording or intent.
+    weight: 5
+    type: content
+  answer providing:
+    content: If the answer for the raised question is deterministic (like exam questions), you are encouraged to provide a reference answer and a comprehensive explanation for it. This criterion is not applicable for questions that do not require a reference answer.
+    weight: 3
+    type: content
+  structure:
+    content: If presenting multiple questions, the written text should be well-structured, with clear separations or headings between individual questions for ease of reading and reference.
+    weight: 3
+    type: format
+  numbering:
+    content: If presenting multiple questions, each question should be appropriately numbered or labeled for easy identification.
+    weight: 1
+    type: format

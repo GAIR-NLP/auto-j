@@ -1,0 +1,12 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  coverage:
+    content: The corrected text should accurately convey the information and intention from the original text without distorting the meaning or context, nor adding any new information or intention not present in the original text.
+    weight: 5
+    type: content
+  pointing out:
+    content: The written text should point out which parts the correction is made, how the correction is made and the reason for the correction instead of only returning the corrected text.
+    weight: 3
+    type: content

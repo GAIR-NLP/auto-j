@@ -1,0 +1,40 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  accuracy:
+    content: The analysis should be accurate, with no misleading, misrepresenting, or non-existent information. However, if you find the statement given by the user is obviously wrong (e.g. with errors or common misunderstanding), you should point it out, correct it and gives out the reasons.
+    weight: 5
+    type: content
+  professional:
+    content: The analysis should be professional, meaning that it should use precise language and industry-specific terminology where appropriate.
+    weight: 2
+    type: style
+  citation:
+    content: The analysis is encouraged to cite official documents, links, references, statistics, research or other credible sources when possible.
+    weight: 2
+    type: content
+  depth:
+    content: The analysis should be deep, meaning that it should go beyond the surface-level information and provide more in-depth insights.
+    weight: 3
+    type: content
+  multiple aspects:
+    content: The analysis should cover multiple aspects of the subject, rather than only focusing on a single aspect.
+    weight: 3
+    type: content
+  user-friendly:
+    content: The analysis should match the target person you are going to explain towards. For example, if the target person is a child, you should avoid using too much jargon and technical terms, while for experts you can use them appropriately. If not explicitly stated, you can assume that the target person is an average person with general world knowledge.
+    weight: 2
+    type: style
+  brief summary at the beginning:
+    content: A good practice is to first give a brief summary of your explanation before a detailed explanation.
+    weight: 1
+    type: format
+  layout:
+    content: The explanation is encouraged to use a well-formed layout that is easy to read and understand, e.g. proper paragraphing, using bullet points, numbered lists, tables, etc.
+    weight: 3
+    type: format
+  objectivity:
+    content: The analysis should be objective, meaning that it should be based on facts and evidence, rather than personal feelings, opinions, or biases.
+    weight: 3
+    type: content

@@ -1,0 +1,39 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+extended:
+  clarity:
+    content: The written text should clearly convey the benefits and features of the product or service being advertised. It should effectively communicate the value proposition to the target audience.
+    weight: 5
+    type: content
+  persuasive language:
+    content: The written text should utilize persuasive language and techniques to capture the attention of the audience, create interest, and stimulate desire for the product or service.
+    weight: 5
+    type: style
+  target audience:
+    content: The written text should be tailored to the specific target audience, considering their demographics, needs, and preferences. It should resonate with the intended audience and effectively address their pain points.
+    weight: 3
+    type: content
+  unique selling proposition:
+    content: The written text should highlight the unique selling points of the product or service, showcasing what sets it apart from competitors and why customers should choose it.
+    weight: 3
+    type: content
+  call to action:
+    content: The written text should include a clear and compelling call to action, guiding the audience on what they should do next, such as making a purchase, subscribing, or contacting for more information.
+    weight: 4
+    type: content
+  attractive:
+    content: The written text should be attractive and engaging, using vivid language and imagery to capture the audience's attention and draw them in.
+    weight: 4
+    type: style
+  headline:
+    content: The written text should have an attention-grabbing headline that immediately captures the audience's interest and entices them to read further.
+    weight: 4
+    type: format
+  concise:
+    content: The written text should be concise, using clear and impactful language to deliver the message effectively.
+    weight: 4
+    type: style
+  formatting and layout:
+    content: The written text should be presented in a visually appealing manner, with proper formatting and layout that enhances readability and flow. It should be easily scannable, allowing the audience to quickly grasp the key points.
+    weight: 3
+    type: format

@@ -1,0 +1,19 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+basic-bot:
+  !include "./other_resources/scenario_criteria/basics/basic_bot.yaml"
+
+extended:
+  vivid:
+    content: Make your response vivid by using emojis, slang, and informal expressions. Keep the conversation engaging and captivating.
+    weight: 4
+    type: style
+  engagement:
+    content: Actively engage the user in the conversation and show genuine interest. Make the user feel valued and heard.
+    weight: 5
+    type: style
+  length:
+    content: Ensure your response is neither too long nor overly verbose. Tailor the length appropriately to the user's query.
+    weight: 5
+    type: format

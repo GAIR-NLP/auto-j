@@ -1,0 +1,48 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  appeal to audience:
+    content: The material should be tailored to the brand's target market, utilizing language, imagery, and references that resonate with the target audience. This includes knowledge about the customer's needs, values, and desires.
+    weight: 5
+    type: content
+  uniqueness:
+    content: The material should clearly articulate the unique value proposition of the product or service that sets it apart from its competitors.
+    weight: 5
+    type: content
+  call to action:
+    content: Every piece of marketing material should contain a strong, clear call to action that motivates the reader to take a specific action, such as buying a product, signing up for a newsletter, or visiting a website.
+    weight: 5
+    type: content
+  benefits:
+    content: The material should highlight the benefits of the product or service, not just its features. What problems does it solve? How does it improve the customer's life?
+    weight: 4
+    type: content
+  clarity:
+    content: The material should be clear and easy to understand, with no jargon or overly complex language.
+    weight: 3
+    type: content
+  brevity:
+    content: The material should be concise and to the point, with no unnecessary words or information.
+    weight: 3
+    type: content
+  branding:
+    content: The material should align with the brand's image and voice, and it should enhance brand recognition.
+    weight: 3
+    type: content
+  accuracy:
+    content: All claims made about the product or service should be verifiable and accurate, to maintain the credibility of the brand.
+    weight: 2
+    type: content
+  tone:
+    content: The tone of the material should be appropriate for the target audience and the product or service. For example, a B2B product might require a more formal tone, while a B2C product might be better served by a friendly, conversational tone.
+    weight: 5
+    type: style
+  readability:
+    content: The text should be easy to read, with short sentences and paragraphs. Use of bullet points or numbered lists may be appropriate depending on the format of the marketing material.
+    weight: 3
+    type: format
+  visual elements:
+    content: If possible, the text should take into account any visual elements that will be used alongside it, such as images, infographics, or videos. The text and visual elements should complement each other.
+    weight: 3
+    type: format

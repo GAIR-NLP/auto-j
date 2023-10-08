@@ -1,0 +1,24 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  creativity:
+    content: The written post should show creativity and originality to catch attention and stand out on social media feeds.
+    weight: 5
+    type: content
+  engagement:
+    content: The written post should be written in a way that encourages interaction from the audience (likes, comments, shares).
+    weight: 4
+    type: content
+  brevity:
+    content: The written post should not be to long, and should convey the message succinctly.
+    weight: 5
+    type: format
+  hashtags:
+    content: Appropriately use hashtags to increase visibility and facilitate discovery by users.
+    weight: 4
+    type: format
+  emojis:
+    content: The written post is encouraged to include relevant emojis to convey emotions or add emphasis, subject to appropriateness and platform norms.
+    weight: 3
+    type: format

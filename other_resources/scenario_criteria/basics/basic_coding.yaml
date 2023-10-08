@@ -1,0 +1,40 @@
+code correctness:
+  content: The written code should produce the expected output and behavior according to the given requirements or specifications, with no syntax errors.
+  weight: 5
+  type: basic
+completeness of components and functionality:
+  content: The written code should include all necessary components and functionality required by the user's query. It should cover all relevant use cases and handle potential edge cases.
+  weight: 5
+  type: basic
+code readability:
+  content: The written code should be well-structured, properly indented, use meaningful variable and function names. It should follow consistent coding conventions and formatting standards.
+  weight: 5
+  type: basic
+input/output requirements:
+  content: The written code should adhere to user-specified requirements for input and output, including format, data type, length, size and so on. This criterion is not applicable if the user has not specified any requirements on input or output.
+  weight: 4
+  type: basic
+documentation:
+  content: The written code should be well-documented, including comments that explain the purpose and functionality of the different parts. It should also provide information on how to use and extend the generated code.
+  weight: 4
+  type: basic
+modularity:
+  content: The written code should be modular, with clear separation of concerns. It should use appropriate functions, classes, and modules to promote reusability and maintainability.
+  weight: 3
+  type: basic
+running efficiency:
+  content: The written code should be optimized for performance and resource usage. It should avoid unnecessary computations, minimize code duplication, and employ efficient algorithms and data structures.
+  weight: 3
+  type: basic
+harmlessness:
+  content: The written code should be secure, stable, minimize side effects, respect privacy and data protection, and avoid malicious behavior.
+  weight: 3
+  type: basic
+error handling:
+  content: The written code should handle potential errors and exceptions gracefully. It should include appropriate error checking, validation, and exception handling mechanisms.
+  weight: 2
+  type: basic
+testing:
+  content: The written code should include a comprehensive set of test cases that cover different scenarios and validate the correctness of the implementation. The tests should be automated and provide adequate code coverage.
+  weight: 2
+  type: basic

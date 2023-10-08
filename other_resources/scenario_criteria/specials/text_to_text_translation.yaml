@@ -1,0 +1,16 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  coverage:
+    content: The written text should cover all key points in the source text. Do not omit any important information or adding non-existing information.
+    weight: 5
+    type: content
+  terms and concepts:
+    content: For terms and concepts, if there is a standard translation that is widely used, use it. Otherwise you should either 1) just keep the original term, or 2) translate it but with the original term attached in brackets.
+    weight: 4
+    type: content
+  structure:
+    content: The translated text should keep the same structure as in the source text. For example, if the source text is a list, the translated text should also be a list.
+    weight: 5
+    type: format

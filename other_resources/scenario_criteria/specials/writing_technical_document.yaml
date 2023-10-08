@@ -1,0 +1,32 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+      accuracy:
+        content: The written text should accurately describe the technical product or process, without any errors or oversights. It should contain enough technical detail to be helpful to the intended audience.
+        weight: 5
+        type: content
+      completeness:
+        content: The written text should cover all aspects of the technical product or process, leaving no key elements unexplained.
+        weight: 4
+        type: content
+      conciseness:
+        content: The written text should communicate the required information as concisely as possible, without unnecessary repetition or redundancy.
+        weight: 3
+        type: content
+      terminology:
+        content: The written text should use appropriate technical language and terminology, according to the norms and conventions of the field. Jargon should be used sparingly and defined clearly when necessary.
+        weight: 4
+        type: content
+      language:
+        content: The written text should use clear, formal, and accessible language. It should avoid jargon unless necessary, and technical terms should be clearly defined for readers who may not be familiar with them.
+        weight: 5
+        type: style
+      structure:
+        content: The written text should follow a logical structure, with clearly defined sections and sub-sections that make it easy for the reader to follow and understand. It should include headings, subheadings, and appropriate formatting to enhance readability.
+        weight: 5
+        type: format
+      visual aids:
+        content: Where appropriate and feasible, the written text should include visual aids, such as diagrams, charts, or tables, to help explain complex ideas or data. Visual aids should be clear, well-labeled, and integrated seamlessly with the text.
+        weight: 3
+        type: format

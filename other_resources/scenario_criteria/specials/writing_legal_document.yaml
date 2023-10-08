@@ -1,0 +1,37 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  legality:
+    content: The content should conform to legal requirements and laws pertinent to the agreement. It should not endorse illegal activities or terms.
+    weight: 5
+    type: content
+  accuracy:
+    content: The written document should accurately represent the agreement between parties, covering all terms, conditions, obligations, and consequences. It should avoid any ambiguity.
+    weight: 5
+    type: content
+  comprehensiveness:
+    content: The document should contain all necessary sections such as parties involved, effective dates, terms and conditions, obligations, breach of contract consequences etc.
+    weight: 5
+    type: content
+  references:
+    content: Proper references to laws, legal codes, or past legal decisions should be used where appropriate.
+    weight: 4
+    type: content
+  legal terms:
+    content: The document should correctly use legal terms and language relevant to the agreement's nature. Avoid using ambiguous language that could be misinterpreted.
+    weight: 3
+    type: content
+  structure:
+    content: The written document should adhere to the conventional structure of legal documents, including sections such as title, parties, recitals, definitions, operative clauses, and signature blocks.
+    weight: 5
+    type: format
+  formal tone:
+    content: The written text should maintain a formal tone and use professional, legal language. Colloquialisms and informal language should be avoided.
+    weight: 5
+    type: style
+  conciseness:
+    content: The document should be concise and to the point, avoiding unnecessary verbosity.
+    weight: 3
+    type: style
+

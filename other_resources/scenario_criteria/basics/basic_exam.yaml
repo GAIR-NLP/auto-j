@@ -1,0 +1,20 @@
+accuracy of answer:
+  content: For an objective question, the answer should be error-free and provide an accurate response.
+  weight: 5
+  type: basic
+depth of understanding:
+  content: For a subjective question, the response should show a deep and comprehensive understanding of the topic, offer a detailed analysis, and go beyond surface-level information. It should demonstrate critical thinking, provide supporting evidence or examples, and present a well-reasoned argument or perspective.
+  weight: 4
+  type: basic
+explanation of solution process:
+  content: The written answer should include a clear explanation of the solution process, outlining the reasoning behind each step. For example, for multiple choice questions, the answer should explain why the selected option is correct and why the other options are incorrect; for matching questions, the answer should explain why each pair is matched; for ordering questions, the answer should explain why each item is placed in the specific position and how the order is determined.
+  weight: 4
+  type: basic
+structure of answer:
+  content: The witten answer should first provide the exact answer in the desired format (e.g., a number, a word, a selected option, etc.), then followed by the explanation of the answer.
+  weight: 4
+  type: basic
+knowledge points identification:
+  content: The written answer should identify and emphasize the key knowledge points relevant to the question.
+  weight: 2
+  type: basic

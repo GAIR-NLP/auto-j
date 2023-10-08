@@ -1,0 +1,28 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  style:
+    content: For different kinds of text (e.g., news, blog, academic paper, etc.), the writing style of the generated title should be appropriate. You should clearly identify the type of text and the user's requirements. For example, if the text is a news article, the title should be short and concise, and it should be written in a journalistic style. If the text is a blog post, the title should be catchy and interesting, and it should be written in a casual style. If the text is an academic paper, the title should be formal and professional, and it should be written in an academic style.
+    weight: 5
+    type: style
+  attractiveness:
+    content: The generated title should be attractive to readers as much as possible, while ensuring the requirements of relevance and accuracy.
+    weight: 5
+    type: content
+  accuracy:
+    content: The generated title should be accurate, with no misleading, misrepresenting, or non-existent information for title used for summarization. This criterion is not applicable if the title is not used for summarization only.
+    weight: 4
+    type: content
+  coverage:
+    content: If a text is given, the written text should try to cover all key points mentioned in the text, but do not violate the other requirements. This criterion is not applicable if the user do not provide a text.
+    weight: 3
+    type: content
+  relevance to description:
+    content: If a description of the work is given, the written text should be relevant to the description, but do not violate the other requirements. This criterion is not applicable if the user do not provide a description.
+    weight: 3
+    type: content
+  structure:
+    content: A good practice is to first give your generated title explicitly, followed by some explanation or reasons to show why you think this title is appropriate.
+    weight: 2
+    type: format

@@ -1,0 +1,20 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  accuracy:
+    content: The extracted keywords should be accurate, meaning that they should be relevant to the topic of the query and correctly extracted from the text without modification.
+    weight: 5
+    type: content
+  conciseness:
+    content: The extracted keywords should be concise, meaning that they should be short and to the point. The number of keywords should be kept to a minimum, and only the most important keywords should be extracted. Avoid repetition of keywords.
+    weight: 5
+    type: content
+  structure:
+    content: The written text should have a nice format and structure, meaning that it should be well-organized and easy to read.
+    weight: 4
+    type: format
+  layout:
+    content: The written text should use headings, bullet points, lists, tables, or other devices to enhance readability.
+    weight: 4
+    type: format

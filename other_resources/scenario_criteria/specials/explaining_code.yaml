@@ -1,0 +1,29 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  coverage:
+    content: The explanation should cover all important behaviors and functionalities of the code. This criterion is not applicable if the user specifies a particular behavior, functionality or point to be explained.
+    weight: 5
+    type: content
+  accuracy:
+    content: The explanation should be accurate, with no misleading, misrepresenting, or non-existent information about the code.
+    weight: 5
+    type: content
+  professional:
+    content: The explanation should be professional, meaning that it should use precise language and industry-specific terminology where appropriate. It should also cite official documents, links, references, statistics, research or other credible sources when possible.
+    weight: 4
+    type: content
+  user-friendly:
+    content: The explanation should match the target person you are going to explain towards. For example, if the target person is a beginner, you should avoid using too much jargon and technical terms, while for experts you can use them appropriately. If not explicitly stated, you should assume that the target person is a beginner.
+    weight: 4
+    type: style
+  structure:
+    content: A good practice is to first give a brief introduction for the general purpose of the code, followed by a detailed explanation. You can also add some comments in the code to help the reader understand it.
+    weight: 3
+    type: format
+  tricks:
+    content: It is a good practice to use tricks to make the explanation more interesting and easier to understand. For example, you can use analogies, metaphors, or examples to explain abstract concepts. However, you should only use them when appropriate. Not using them if you find it unnecessary is also acceptable.
+    weight: 2
+    type: content
+

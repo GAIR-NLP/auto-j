@@ -1,0 +1,48 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  originality:
+    content: The research presented in the paper should be original and provide new insights or discoveries to the scientific community. Repeating known facts or previously discovered insights without adding value will lower the score.
+    weight: 5
+    type: content
+  hypothesis:
+    content: The paper should state a clear and testable hypothesis or research question.
+    weight: 5
+    type: content
+  methodology:
+    content: The paper should provide a clear and comprehensive explanation of the research methodology used, including a justification of why it was chosen.
+    weight: 5
+    type: content
+  results:
+    content: The results should be clearly presented and thoroughly analyzed. The paper should also discuss how these results contribute to the field of study.
+    weight: 4
+    type: content
+  literature review:
+    content: The paper should include a comprehensive literature review that situates the current research within the context of previous works in the field.
+    weight: 3
+    type: content
+  conclusion:
+    content: The paper should wrap up with a conclusion that summarizes the main findings, their implications, and potential directions for future research.
+    weight: 3
+    type: content
+  references:
+    content: The paper should reference other works accurately and appropriately.
+    weight: 3
+    type: content
+  structure:
+    content: The paper should follow the conventional structure of scientific papers, which typically includes sections like Introduction, Methods, Results, Discussion, and Conclusion.
+    weight: 5
+    type: format
+  language:
+    content: The paper should be written in formal, academic language, avoid using jargon unless necessary, and all technical terms should be clearly defined.
+    weight: 5
+    type: style
+  visualization:
+    content: The paper should include well-designed tables, charts, and/or figures as necessary to effectively present data or results.
+    weight: 4
+    type: format
+  citation:
+    content: Citations should follow a consistent, recognized academic format such as APA, MLA, Chicago Style, etc.
+    weight: 3
+    type: format

@@ -1,0 +1,11 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+basic-bot:
+  !include "./other_resources/scenario_criteria/basics/basic_bot.yaml"
+
+extended:
+  layout:
+    content: The response is encouraged to use a layout that is easy to read and understand, e.g. proper paragraphing, using bullet points, numbered lists, tables, etc.
+    weight: 3
+    type: format

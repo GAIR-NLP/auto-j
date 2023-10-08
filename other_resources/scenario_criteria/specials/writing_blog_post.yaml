@@ -1,0 +1,32 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  clarity:
+    content: The written text should clearly convey your ideas. Avoid using complex vocabulary if a simpler one can convey the message equally well. Make sure each paragraph has a clear purpose.
+    weight: 5
+    type: content
+  originality:
+    content: The content must be unique and original. Repetition of the same ideas, plagiarism, or rehashing of commonly found content is unacceptable.
+    weight: 5
+    type: content
+  depth:
+    content: The content should provide in-depth analysis or insights on the topic. Surface-level discussions or summaries may not be sufficient.
+    weight: 4
+    type: content
+  accuracy:
+    content: The information presented must be accurate. Any data, statistics or claims made must be verifiable and sourced appropriately.
+    weight: 5
+    type: content
+  engagement:
+    content: The content should be engaging for the readers, prompting them to continue reading, share, or engage in discussion. Use of questions, calls to action, and engaging language is encouraged.
+    weight: 4
+    type: style
+  layout:
+    content: The content should be properly formatted with headers, subheaders, bullet points or lists where applicable to enhance readability.
+    weight: 4
+    type: format
+  citation:
+    content: Any data, statistics, quotes or claims must be properly cited in a recognized citation format.
+    weight: 3
+    type: format

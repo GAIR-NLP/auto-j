@@ -1,0 +1,35 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+extended:
+  qualifications:
+    content: The application should clearly and specifically outline the qualifications, skills, and experiences that make the applicant suitable for the role.
+    weight: 5
+    type: content
+  motivation:
+    content: The text should convey the applicant's motivation for applying to the position, including the alignment with career goals or interests.
+    weight: 4
+    type: content
+  company knowledge:
+    content: The application should demonstrate a good understanding of the company's values, mission, and current projects.
+    weight: 4
+    type: content
+  contact information:
+    content: The job application should include accurate and up-to-date contact information for the applicant.
+    weight: 3
+    type: content
+  professionalism:
+    content: The language used should be formal, respectful, and professional, without any slang or colloquialism.
+    weight: 5
+    type: style
+  structure:
+    content: The text should be well-organized, including an introduction, body discussing qualifications and experiences, and a closing statement.
+    weight: 4
+    type: format
+  conciseness:
+    content: The application should be concise and to the point, avoiding unnecessary information or overly verbose language.
+    weight: 4
+    type: style
+  personalization:
+    content: The application should be personalized and tailored to the job and company being applied to, not a generic form letter.
+    weight: 4
+    type: style

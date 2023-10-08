@@ -1,0 +1,36 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  clarity:
+    content: The message of the presentation should be clear and easy to understand. Avoid complex jargon unless necessary.
+    weight: 5
+    type: content
+  engagement:
+    content: The content should be engaging and should keep the audience interested. This can be done through the use of anecdotes, rhetorical questions, interesting facts, etc.
+    weight: 4
+    type: content
+  focus:
+    content: Stay focused on the main topic and avoid unnecessary digressions.
+    weight: 5
+    type: content
+  persuasiveness:
+    content: If the presentation's goal is to persuade, the text should construct a compelling argument and use persuasive techniques effectively.
+    weight: 4
+    type: content
+  pacing:
+    content: The text should be paced appropriately, balancing the density of information, pauses for emphasis, and transitions between topics.
+    weight: 3
+    type: content
+  structure:
+    content: The presentation should have a clear structure - typically an introduction, body, and conclusion. Each part should serve its purpose.
+    weight: 5
+    type: format
+  tone:
+    content: Maintain a positive and professional tone throughout the presentation. This criterion is not applicable if the user specifies a specific tone or style.
+    weight: 4
+    type: style
+  audience friendly:
+    content: The presentation should be respectful and considerate to the audience. It should also be tailored to the audience. The content should be appropriate for the audience's level of knowledge and interest.
+    weight: 4
+    type: content

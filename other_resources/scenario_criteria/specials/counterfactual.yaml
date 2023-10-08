@@ -1,0 +1,40 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  coherence:
+    content: The written text should maintain logical coherence and flow, considering the counterfactual premise and providing a clear and consistent narrative.
+    weight: 5
+    type: content
+  imagination:
+    content: The written text should demonstrate creative and imaginative thinking in constructing plausible scenarios based on the counterfactual premise.
+    weight: 4
+    type: content
+  logical reasoning:
+    content: The written text should employ logical reasoning to support the counterfactual premise and present a coherent argument or narrative.
+    weight: 4
+    type: content
+  alternative outcomes:
+    content: The written text should explore and discuss alternative outcomes or possibilities that arise from the counterfactual premise, considering cause and effect relationships through logical reasoning.
+    weight: 4
+    type: content
+  contextual understanding:
+    content: The written text should exhibit an understanding of the context in which the counterfactual scenario is set, taking into account relevant factors and implications.
+    weight: 3
+    type: content
+  clarity:
+    content: The written text should be clear and easily understandable, conveying the counterfactual premise and its implications effectively.
+    weight: 4
+    type: content
+  structure:
+    content: The written text should start with a brief summary, followed by some key points, and finally are more detailed explanations.
+    weight: 3
+    type: format
+  layout:
+    content: The written text are encouraged to use headings, bullet points, lists, tables, or other devices to enhance readability.
+    weight: 3
+    type: format
+  language style:
+    content: The written text should adapt the language style to suit the counterfactual scenario, maintaining an appropriate tone and vocabulary.
+    weight: 3
+    type: style

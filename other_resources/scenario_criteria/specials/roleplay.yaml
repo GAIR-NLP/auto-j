@@ -1,0 +1,12 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  knowledge:
+    content: The written text should be based on the knowledge of the given persona, and should avoid containing any information that the persona does not know unless there are specials requirements explicitly stated. On the other hand, knowledge that the persona are familiar with is encouraged to be included.
+    weight: 5
+    type: content
+  style:
+    content: Your writing style should be consistent with the given persona. Some aspects you can consider are tone, formality, politeness, wording, catchphrase, action, etc. Don't be OOC (out of character).
+    weight: 5
+    type: style

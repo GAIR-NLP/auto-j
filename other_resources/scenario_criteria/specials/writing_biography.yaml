@@ -1,0 +1,40 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  objectivity:
+    content: The biography should present unbiased information without personal opinions or biases.
+    weight: 5
+    type: content
+  accuracy:
+    content: The biography must be factually precise and avoid distorting the truth.
+    weight: 5
+    type: content
+  relevance:
+    content: Focus on the subject's life, highlighting significant events and contributions while excluding irrelevant information.
+    weight: 5
+    type: content
+  depth:
+    content: Provide a comprehensive understanding of the individual's life, covering essential aspects such as education, career, and personal background.
+    weight: 4
+    type: content
+  structure:
+    content: Organize the biography in a logical and coherent manner, utilizing headings and subheadings for clarity.
+    weight: 3
+    type: format
+  balance:
+    content: Address achievements and controversies objectively, presenting different perspectives without favoritism.
+    weight: 3
+    type: content
+  tone:
+    content: Maintain a professional and engaging writing style, using clear and concise language.
+    weight: 3
+    type: style
+  source attribution:
+    content: Properly attribute information, quotes, and anecdotes to their sources, including references and citations.
+    weight: 3
+    type: format
+  formatting:
+    content: Ensure a well-organized structure with an introduction, body, and conclusion, labeling sections appropriately.
+    weight: 3
+    type: format

@@ -1,0 +1,32 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  experience:
+    content: The written essay should incorporate personal experiences. These experiences should be relevant and contribute to the essay's overall message. This criterion is not applicable if the essay is not about personal experiences.
+    weight: 5
+    type: content
+  insight:
+    content: The written essay should provide personal insights that reflect on the topic.
+    weight: 5
+    type: content
+  authenticity:
+    content: The written essay should feel authentic, revealing the writer's genuine thoughts, emotions, and experiences.
+    weight: 3
+    type: content
+  structure:
+    content: The written essay should have a clear introduction, body, and conclusion. It should start with an introduction, then craft a main body telling your story, and finally wrap up the piece with a conclusion.
+    weight: 5
+    type: format
+  clarity:
+    content: The language used should be clear and easy to understand. Avoid overly complex sentences and jargon.
+    weight: 4
+    type: content
+  tone:
+    content: The written essay should maintain a consistent and appropriate tone.
+    weight: 3
+    type: style
+  variety:
+    content: The written essay should have a variety of sentence structures and lengths to keep the writing dynamic and interesting.
+    weight: 3
+    type: style

@@ -1,0 +1,44 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  conciseness:
+    content: The content of the email should be concise and to the point. Whenever possible, avoid including irrelevant information in your email unless it contributes significantly to understanding the content of your letter.
+    weight: 5
+    type: content
+  purpose:
+    content: The content of the email should match the purpose of the email, whether it is to inform, request, persuade, apologize, or thank someone.
+    weight: 5
+    type: content
+  subject line:
+    content: Make sure your subject line is clear and concise. It should give the reader an idea of what the email is about.
+    weight: 3
+    type: format
+  greeting:
+    content: Start your email with a polite greeting. Use the recipient’s name if possible. If necessary, you should use honorifics.
+    weight: 3
+    type: format
+  introduction:
+    content: If you’re writing to someone for the first time or if it’s a formal email, it’s best to include an introduction. However, if you’re writing to someone you’re familiar with, you can skip the introduction or keep it brief.
+    weight: 3
+    type: format
+  body:
+    content: In the body of the email, provide details about the issue you are writing about. Be clear and concise.
+    weight: 3
+    type: format
+  closing:
+    content: End your email with a polite closing. Thank the recipient for their time and consideration.
+    weight: 2
+    type: format
+  signature:
+    content: Include your name and contact information in your signature.
+    weight: 2
+    type: format
+  font:
+    content: Use a font size that is easy to read and a style that is professional.
+    weight: 2
+    type: format
+  tone:
+    content: The tone of the email should be appropriate for the situation and the relationship between the sender and the recipient.
+    weight: 2
+    type: style

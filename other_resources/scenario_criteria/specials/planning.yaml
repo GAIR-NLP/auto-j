@@ -1,0 +1,28 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  clarity:
+    content: The written plan should clearly outline the objectives, tasks, and timeline of the event or activity, ensuring that the reader can easily understand the proposed plan.
+    weight: 5
+    type: content
+  feasibility:
+    content: The written plan should propose realistic and achievable steps and actions, considering available resources, constraints, and logistical factors.
+    weight: 4
+    type: content
+  creativity:
+    content: The written plan should demonstrate creative thinking and innovative ideas in organizing and executing the event or activity, providing unique and engaging elements.
+    weight: 3
+    type: content
+  thoroughness:
+    content: The written plan should cover all essential aspects and details of the event or activity, like logistics, budget, promotion, and participant engagement.
+    weight: 3
+    type: content
+  structure:
+    content: The written plan should be well-structured, with a logical flow of ideas and clearly defined sections or headings for different components of the plan.
+    weight: 4
+    type: format
+  layout:
+    content: The written plan is encouraged to use headings, bullet points, lists, tables, or other devices to enhance readability and coherence.
+    weight: 5
+    type: format

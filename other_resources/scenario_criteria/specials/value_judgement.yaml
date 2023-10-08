@@ -1,0 +1,40 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+extended:
+  clarity:
+    content: The written text should provide a clear evaluation and judgment on the given topic or statement. It should be easy for the reader to understand the writer's viewpoint.
+    weight: 5
+    type: content
+  logical reasoning:
+    content: The written text should demonstrate logical reasoning and provide supporting arguments or evidence for the value judgment made.
+    weight: 5
+    type: content
+  depth:
+    content: The written text should provide a comprehensive analysis and delve into the various aspects of the topic or statement being evaluated.
+    weight: 4
+    type: content
+  balance:
+    content: For controversial topics, the written text should aim for a balanced assessment, considering different perspectives and acknowledging potential counterarguments. This criterion is not applicable for topics that are not controversial.
+    weight: 4
+    type: content
+  tone:
+    content: The written text should adopt an appropriate tone that matches the evaluative nature of the task. It should be persuasive and authoritative, while maintaining professionalism and avoiding excessive emotional language.
+    weight: 4
+    type: style
+  structure:
+    content: The written text should follow a clear and well-organized structure, with an introduction, body paragraphs, and a conclusion. It should effectively present the evaluation and judgment.
+    weight: 3
+    type: format
+  layout:
+    content: The written text are encouraged to use headings, bullet points, lists, tables, or other devices to enhance readability.
+    weight: 3
+    type: format
+  language style:
+    content: The written text should use formal language suitable for the task, avoiding slang or colloquial expressions. It should demonstrate a strong command of vocabulary and employ varied sentence structures to enhance readability and engagement.
+    weight: 3
+    type: style
+  citation:
+    content: The written text is encouraged to also cite official documents, links, references, statistics, research or other credible sources when possible.
+    weight: 3
+    type: content

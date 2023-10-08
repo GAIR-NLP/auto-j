@@ -1,0 +1,16 @@
+basic-coding:
+  !include "./other_resources/scenario_criteria/basics/basic_coding.yaml"
+
+extended:
+  coverage:
+    content: The written code should accurately convey the information, intention, functionality and behavior from the original code without omitting any of them or adding new ones unless necessary. Useless, redundant, or duplicated code should be removed. This criterion is not applicable if the user only wants to simplify or optimize a part of the code.
+    weight: 5
+    type: content
+  pointing out:
+    content: The written code should point out which parts the simplification is made, how the simplification is made and the reason for the simplification instead of only returning the new code.
+    weight: 4
+    type: content
+  simplification:
+    content: The written code should effectively simplify the original code by reducing unnecessary complexity, eliminating redundant or duplicated code, and improving code readability without altering the original code's functionality or introducing new behavior. However, new implementation is allowed as long as it can achieve the same functionality as the original code.
+    weight: 5
+    type: content

@@ -1,0 +1,39 @@
+basic-writing:
+  !include "./other_resources/scenario_criteria/basics/basic_writing.yaml"
+
+basic-bot:
+  !include "./other_resources/scenario_criteria/basics/basic_bot.yaml"
+
+extended:
+  professional:
+    content: The written text should be professional, meaning that it should use precise language and industry-specific terminology where appropriate.
+    weight: 3
+    type: style
+  citation:
+    content: The written text is encouraged to cite official documents, links, references, statistics, research or other credible sources when possible.
+    weight: 2
+    type: content
+  main features:
+    content: The written text should point out the main features of the recommended items (or people, locations etc.), such as their key features, benefits, advantages and disadvantages, or other characteristics.
+    weight: 5
+    type: content
+  comparison:
+    content: The written text should compare the recommended items with other similar items, such as their differences and similarities, or compare among different recommended items. This criterion is not applicable if the user only asks for one item.
+    weight: 3
+    type: content
+  explanation:
+    content: The written text should explain the reasons for the recommendations.
+    weight: 5
+    type: content
+  diversity:
+    content: While staying relevant to the topic and user needs, the recommended content should be as diverse as possible, avoiding recommending overly similar content. This criterion is not applicable if the user specifies a list of items to choose from. This criterion is also not applicable if the user only asks for one item.
+    weight: 3
+    type: content
+  structure:
+    content: The written text should have a clear and logical structure, meaning that it should show the highlights and key points of the response in an organized way. A good practice can be to start with a brief summary or suggestion, followed by a detailed explanation or justification.
+    weight: 4
+    type: format
+  layout:
+    content: The written text are encouraged to use  headings, bullet points, lists, tables, or other devices to enhance readability.
+    weight: 3
+    type: format
