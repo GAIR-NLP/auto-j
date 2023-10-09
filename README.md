@@ -501,6 +501,6 @@ Please cite the repo or the paper if the model/code/conclusion in this repo is h
 
 We thank Shanghai AI Lab for providing the computing resources.
 
-We thank Chunpu Xu and Yuqing yang for supporting the human annotation process.
+We thank Chunpu Xu and Yuqing Yang for supporting the human annotation process.
 
 This repository is based on [PKU-Alignment/safe-rlhf](https://github.com/PKU-Alignment/safe-rlhf) (training) and [vllm-project/vllm](https://github.com/vllm-project/vllm) (inference), we also thank their contribution to the community.
