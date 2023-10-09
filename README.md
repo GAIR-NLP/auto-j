@@ -48,7 +48,7 @@ We develop **Auto-J**, a new open-source generative judge that can effectively e
 We use `python 3.10` in this project. You are encouraged to create a virtual environment through `conda`.
 
 
-Then, we have to install all the libraries listed in `requirements.txt`, note that you may choose an appropriate version of `torch` according to your CUDA version (we write `torch>=2.0.1+cu118` in this file).
+Then, we have to install all the libraries listed in `requirements.txt`. Note that you may choose an appropriate version of `torch` according to your CUDA version (we write `torch>=2.0.1+cu118` in this file).
 
 ```bash
 pip install -r requirements.txt
@@ -90,10 +90,10 @@ You can build the input via the `build_autoj_input` function for both pairwise r
 
 ```python
 input_pairwise = build_autoj_input(prompt="your query", 
-               resp1 = "a response from an LLM",  resp2 = "another response from an LLM", 
+               resp1 = "a response from a LLM",  resp2 = "another response from a LLM", 
                protocol = "pairwise_tie") # for pairwise response comparison 
 input_single   = build_autoj_input(prompt="your query", 
-               resp1 = "a response from an LLM", resp2=None, 
+               resp1 = "a response from a LLM", resp2=None, 
                protocol = "single") # for single response evaluation 
 input_ = input_pairwise # or input_single
 ```
@@ -163,7 +163,7 @@ Note that for certain scenarios (the exam group) that needs reasoning, we ask th
 
 #### Single-response part
 
-The single response part of training data is in `data/training/single_traindata.jsonl`, which is the combined from two independent critiques for a response (with and without scenario criteria as reference in evaluation). It has 960 samples,, and each line is a python dict with the following format:
+The single response part of training data is in `data/training/single_traindata.jsonl`, which is the combination of two independent critiques for a response (with and without scenario criteria as a reference in evaluation). It has 960 samples, and each line is a python dict with the following format:
 
 <details>
 <summary>Format for single-response training data</summary>
@@ -181,10 +181,10 @@ The single response part of training data is in `data/training/single_traindata.
 where the fields are:
 
 - *usermsg*: The input text for our model before wrapped with a certain prompt (or template), it contains the query, the response and the instructions.
-- *target_output*: The target output in for the given usermsg, which is the judgment to evaluate the response.
+- *target_output*: The target output for the given usermsg, which is the judgment to evaluate the response.
 - *pred_score*: GPT-4 rating of the response.
 - *scenario*: The scenario that the query of this sample belongs to.
-- *source_dataset*: The dataset the this sample comes from.
+- *source_dataset*: The dataset this sample comes from.
 
 </details>
 
@@ -215,7 +215,7 @@ where the fields are:
 - *cost*: The cost of this API call.
 - *finish_reason*: The finish reason for this API call, should be "stop".
 - *meta/scenario*: The scenario that the query of this sample belongs to.
-- *meta/protocol*: "single" or "single_reasoning" (For certain scenarios that needs reasoning, we ask the GPT-4 to first give out a independent answer, then give out the critiques.)
+- *meta/protocol*: "single" or "single_reasoning" (For certain scenarios that need reasoning, we ask the GPT-4 to first give out an independent answer, then give out the critiques.)
 - *meta/prompt*: The query of this sample.
 - *meta/response*: The response of this sample. 
 
@@ -223,11 +223,11 @@ where the fields are:
 
 ### Test Data for Three Tasks
 
-We release the test data for the three meta-evaluation tasks introduced in our paper. The data has a balanced distribution over the 58 real-world scenarios, making it a testbed for validating different evaluators' ability comprehensively. 
+We release the test data for the three meta-evaluation tasks introduced in our paper. The data has a balanced distribution over the 58 real-world scenarios, making it a testbed for validating different evaluators' abilities comprehensively. 
 
 #### Pairwise response comparison
 
-We collect $58\times24=1392$ samples for pairwise response comparison task (24 pairs for each scenario). The data is in `data/test/testdata_pairwise.jsonl`. Each line of this file is as follows:
+We collect $58\times24=1392$ samples for the pairwise response comparison task (24 pairs for each scenario). The data is in `data/test/testdata_pairwise.jsonl`. Each line of this file is as follows:
 
 <details>
 <summary>Format</summary>    
@@ -255,7 +255,7 @@ where the fields are:
 
 #### Critique generation
 
-Based on the data of pairwise response comparison, we construct the data for critique generation task. Specifically, we sample 4 out of the 24 samples for each scenario ($58\times4=232$ samples in total), and pick the less preferred response to be criticized. We also provide the critiques by Auto-J. The data is in `data/test/testdata_critique.jsonl`. Each line of this file is as follows:
+Based on the data of pairwise response comparison, we construct the data for the critique generation task. Specifically, we sample 4 out of the 24 samples for each scenario ($58\times4=232$ samples in total), and pick the less preferred response to be criticized. We also provide the critiques by Auto-J. The data is in `data/test/testdata_critique.jsonl`. Each line of this file is as follows:
 
 <details>
     <summary>Format</summary>
@@ -331,7 +331,7 @@ where the fields are:
 
 ### Scenarios
 
-One major part of data construction is the definition for different scenarios and hand-written criteria for each of them to guide the evaluation.
+One major part of data construction is the definition of different scenarios and hand-written criteria for each of them to guide the evaluation.
 
 #### Definition
 
@@ -339,7 +339,7 @@ The definition of each scenario can be found in `other_resources/constants.py`.
 
 #### Criteria
 
-We manually design criteria for each scenario to guide GPT-4 to generate more comprehensive judgements.
+We manually design criteria for each scenario to guide GPT-4 to generate more comprehensive judgments.
 
 These criteria can be found in `other_resources/scenario_criteria/specials`. The set of criteria for a scenario is organized as a `yaml` file (the following is the criteria for `planning` scenario), where each criterion consists of the name, description, weight (aborted), and type (basic, content, format or style):
 
@@ -379,14 +379,14 @@ extended:
 
 </details>
 
-where `basic-writing` are the basic and general criteria (they may be inherited by multiple scenarios): 
+where `basic-writing` is the basic and general criteria (they may be inherited by multiple scenarios): 
 
 <details>
     <summary>The complete criteria for "basic-writing" scenario.</summary>
 
 ```yaml
 completeness of instruction following:
-  content: For all key instructions (e.g., answer multiple questions or perform multiple tasks) and explicit constraints (e.g. word count, response length limit, word usage, output format, etc.) provided by the user, the response should be complete in following all of them without any omission.
+  content: For all key instructions (e.g., answer multiple questions or perform multiple tasks) and explicit constraints (e.g. word count, response length limit, word usage, output format, etc.) provided by the user, the response should be complete in the following all of them without any omission.
   weight: 4
   type: basic
 accuracy:
@@ -394,7 +394,7 @@ accuracy:
   weight: 4
   type: basic
 information richness:
-  content: The response is encouraged to provide rich, detailed and professional information, e.g. by providing examples, explanations, citations, and additional information. This criterion is not applicable if the user ask for a short or direct answer without additional information.
+  content: The response is encouraged to provide rich, detailed and professional information, e.g. by providing examples, explanations, citations, and additional information. This criterion is not applicable if the user asks for a short or direct answer without additional information.
   weight: 4
   type: basic
 harmlessness:
@@ -460,7 +460,7 @@ num_gpus = torch.cuda.device_count()
 model_name_or_dir = "GAIR/autoj-scenario-classifier" # or the local directory to store the downloaded model
 llm = LLM(model=model_name_or_dir, tensor_parallel_size=num_gpus)
 
-query = "generate a function that returns a array of even values in the Fibonacci series."
+query = "generate a function that returns an array of even values in the Fibonacci series."
 input_ = PROMPT_INPUT_FOR_SCENARIO_CLS.format(input=query)
 
 sampling_params = SamplingParams(temperature=0.0, top_p=1.0, max_tokens=30)
