@@ -116,7 +116,35 @@ outputs = llm.generate(inputs, sampling_params)
 judgments = [item.outputs[0].text for item in outputs]
 ```
 
+**(Optional) Step 5: Extract results**
 
+Once the generated judgment has been generated, we can extract the evaluation result (comparison result or rating) from it heuristically:
+
+```python
+def extract_pariwise_result(raw_output):
+    raw_output = raw_output.strip()
+    pos = raw_output.rfind('final decision is ')
+    pred_label = -1
+    if pos != -1:
+        pred_rest = raw_output[pos + len('final decision is '):].strip().lower()
+        if pred_rest.startswith('response 1'): pred_label = 0
+        elif pred_rest.startswith('response 2'): pred_label = 1
+        elif pred_rest.startswith('tie'): pred_label = 2
+    return pred_label
+
+def extract_single_rating(score_output):
+	pred_score = 0.0
+    if "Rating: [[" in score_output:
+        pos = score_output.rfind("Rating: [[")
+        pos2 = score_output.find("]]", pos)
+        assert pos != -1 and pos2 != -1
+        pred_score = float(score_output[pos + len("[["):pos2].strip())
+    return pred_score
+
+result = extract_pariwise_result(judgment) # `extract_single_rating` for single-response evaluation 
+
+print(result)
+```
 
 ## Data
 
