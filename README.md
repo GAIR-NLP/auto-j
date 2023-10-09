@@ -29,7 +29,7 @@ We develop **Auto-J**, a new open-source generative judge that can effectively e
 - [Quick Start](#quick-start)
   - [Setup](#setup)
   - [Model](#model)
-  - [Inference](#inference)
+  - [Usage](#usage)
 - [Data](#data)
   - [Training Data](#training-data)
   - [Test Data for Three Tasks](#test-data-for-three-tasks)
@@ -62,7 +62,7 @@ Auto-J is now available on huggingface-hub:
 | ---------- | ------------------------------------------------------------ | ------- | ------------------------------------------------------------ |
 | Auto-J     | 🤗 <a href="https://huggingface.co/GAIR/autoj-13b" target="_blank">GAIR/autoj-13b</a> | **13B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
 
-### Inference
+### Usage
 
 Our inference codes are based on [vllm-project/vllm](https://github.com/vllm-project/vllm). A complete example can be found in `codes/example.py`.
 
