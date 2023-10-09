@@ -64,7 +64,7 @@ Auto-J is now available on huggingface-hub:
 
 ### Usage
 
-Our inference codes are based on [vllm-project/vllm](https://github.com/vllm-project/vllm). A complete example can be found in `codes/example.py`.
+Our implementation is based on [vllm-project/vllm](https://github.com/vllm-project/vllm). A complete example can be found in `codes/example.py`.
 
 **Step 1: Import necessary libraries**
 
@@ -107,7 +107,7 @@ judgment = output[0].outputs[0].text
 print(judgment)
 ```
 
-We also support inference in batch, which is more efficient in practice:
+We also support evaluation in batch, which is more efficient in practice:
 
 ```python
 # say we have multiple `input_pairwise`s
@@ -450,7 +450,7 @@ By using the following prompt, the scenario classifier can identify which scenar
 PROMPT_INPUT_FOR_SCENARIO_CLS: str = "Identify the scenario for the user's query, output 'default' if you are uncertain.\nQuery:\n{input}\nScenario:\n"
 ```
 
-And here is an example for inference (using vllm as well like Auto-J inference):
+Here is an example (using vllm like Auto-J usage):
 
 ```python
 from vllm import LLM, SamplingParams
@@ -503,4 +503,4 @@ We thank Shanghai AI Lab for providing the computing resources.
 
 We thank Chunpu Xu and Yuqing Yang for supporting the human annotation process.
 
-This repository is based on [PKU-Alignment/safe-rlhf](https://github.com/PKU-Alignment/safe-rlhf) (training) and [vllm-project/vllm](https://github.com/vllm-project/vllm) (inference), we also thank their contribution to the community.
+This repository is based on [PKU-Alignment/safe-rlhf](https://github.com/PKU-Alignment/safe-rlhf) (training) and [vllm-project/vllm](https://github.com/vllm-project/vllm) (usage), we also thank their contribution to the community.
