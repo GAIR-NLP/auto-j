@@ -508,7 +508,7 @@ The training data is in `other_resources/scenario_classifier_data/traindata.json
 {
 	"category": "writing_job_application", 
 	"instruction": "Write me a cover letter to a Deloitte consulting firm ...", 
-	"input": ""
+	"input": "" # may be empty
 }
 ```
 
