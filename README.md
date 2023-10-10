@@ -1,6 +1,6 @@
 # Generative Judge for Evaluating Alignment
 
-This is the official repository for [**Generative Judge for Evaluating Alignment**](arxiv.xxx)
+This is the official repository for [**Generative Judge for Evaluating Alignment**](https://arxiv.org/abs/2310.05470).
 
 
 
@@ -521,7 +521,11 @@ The test data is in `other_resources/scenario_classifier_data/testdata.jsonl` wi
 Please cite the repo or the paper if the model/code/conclusion in this repo is helpful to you.
 
 ```
-@misc{
+@article{li2023generative,
+  title={Generative Judge for Evaluating Alignment},
+  author={Li, Junlong and Sun, Shichao and Yuan, Weizhe and Fan, Run-Ze and Zhao, Hai and Liu, Pengfei},
+  journal={arXiv preprint arXiv:2310.05470},
+  year={2023}
 }
 ```
 
