@@ -358,7 +358,7 @@ where the fields are:
 
 ### Leaderboard
 
-We also release the benchmarking results on the pairwise response comparison and critique generation tasks as a leaderboard. See [./codes/leaderboard/README.md](codes\leaderboard\README.md) for more details.
+We also release the benchmarking results on the pairwise response comparison and critique generation tasks as a leaderboard. See [./codes/leaderboard/README.md](codes/leaderboard/README.md) for more details.
 
 
 
