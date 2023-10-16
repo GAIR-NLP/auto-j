@@ -128,90 +128,16 @@
     </div>
 </section>
 
-<!--
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
--->
 
-<!--
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
--->
+<section class="section">
+  <div class="container is-max-desktop">
 <!-- Abstract. -->
-<div class="columns is-centered has-text-centered" font-size: 18px;
-">
+<div class="columns is-centered has-text-centered" style="font-size: 18px;">
 <div class="column is-four-fifths">
     <h1 class="title is-3">Overview</h1>
-    <div class="content has-text-justified">
+    <div class="content has-text-justified" >
 
-
+        <div>
         <p>We develop <b>Auto-J</b>, a new open-source generative judge that can effectively evaluate different LLMs on
             how they align to human preference. It is featured with:</p>
         <ul>
@@ -221,30 +147,24 @@
             <li><b>Flexibility</b>: Auto-J supports both pairwise response comparison and single-response evaluation by
                 just switching to corresponding prompts.
             </li>
-            <li><b>Interpretability</b>: Auto-J provides detailed natural language critiques that enhance the
+            <li><b>Interpretability</b>: Auto-J provides detailed critiques that enhance the
                 reliability of its evaluation outcomes and facilitate humans' involvement in the evaluation loop.
             </li>
         </ul>
+        </div>
 
-        <!--        <p>Besides the model, we also release other resources:</p>-->
-
-        <!--        <ul>-->
-        <!--            <li>Training data</li>-->
-        <!--            <li>Test data and benchmark</li>-->
-        <!--            <li>Definition and manually designed criteria for scenarios, and a scenario classifier.</li>-->
-        <!--        </ul>-->
 
         <figure>
-            <img src="./figs/example_pairwise.png" style="zoom: 40%;" alt="Description of first image">
-            <figcaption>Example 1: Compare a pair of responses for a query, with key factors to distinguish them and the
-                final decision.
+            <img src="./figs/example_pairwise.png" style="zoom: 35%;" alt="Description of first image">
+            <figcaption>Example 1: Compare a pair of responses, with key factors to distinguish them and the
+                final verdict.
             </figcaption>
         </figure>
 
         <!-- Second figure -->
         <figure>
-            <img src="./figs/example_single.png" style="zoom: 40%;" alt="Description of second image">
-            <figcaption>Example 2: Evaluate a single response for a query, with critiques and an overall rating.
+            <img src="./figs/example_single.png" style="zoom: 35%;" alt="Description of second image">
+            <figcaption>Example 2: Evaluate a single response, with critiques and an overall rating.
             </figcaption>
         </figure>
         </p>
@@ -255,56 +175,62 @@
 <!--/ Abstract. -->
 
 <!-- Methodology -->
-<div class="columns is-centered has-text-centered" font-size: 18px;
-">
+<div class="columns is-centered has-text-centered" style = "font-size: 16px;">
 <div class="column is-four-fifths">
     <h1 class="title is-3">Methodology</h1>
     <div class="content has-text-justified">
         <figure>
-            <img src="./figs/data_collection_pipeline.png" style="zoom: 40%;" alt="Description of second image">
+            <img src="./figs/data_collection_pipeline.png" style="zoom: 100%;" alt="Description of second image">
         </figure>
-        <p>We first define 58 different scenarios that can be merged into 8 major groups. For each scenario, we also
-            manually design a set of criteria.
-            We collect data from real-world user queries and responses from various chatbots, and classify the queries
-            based on our defined scenarios with the help of our newly-trained scenario classifier.
-        Then we use GPT-4 to generate the judgment for both our pairwise data (3,436 samples) and single-response data (960
-            samples) with the criteria for each scenario as a reference.
-        Specifically, GPT-4 is required to generate a comprehensive judgment for a data sample from two aspects:
-            1) referring to the criteria for each scenario and 2) brainstorming more specific points for this sample.
-            The judgment for pairwise response comparison are the key factors to distinguish the two responses and the
-            final verdict (i.e., which response is better or tie), and the judgment for single-response evaluation are the critiques and an overall rating.
-            These judgments, along with the user query and the responses, constitute our training data.
-        In training, we use both the pairwise comparison and single-response data to train Auto-J, so that it can seamlessly toggle between these two evaluation protocols simply by applying the corresponding prompts.
-        We also construct new testbeds with a balanced scenario distribution for assessing the effectiveness of different functionalities of Auto-J on pairwise response comparison and single-response evaluation.</p>
+<!--        <p>We first define 58 different scenarios that can be merged into 8 major groups. For each scenario, we also-->
+<!--            manually design a set of criteria. We collect data from real-world user queries and responses from various chatbots, and classify the queries-->
+<!--            based on our defined scenarios with the help of our newly-trained scenario classifier. Then we use GPT-4 to generate the judgment for both our pairwise data (3,436 samples) and single-response data (960-->
+<!--            samples) with the criteria for each scenario as a reference. Specifically, GPT-4 is required to generate a comprehensive judgment for a data sample from two aspects:-->
+<!--            1) referring to the criteria for each scenario and 2) brainstorming more specific points for this sample.-->
+<!--            The judgment for pairwise response comparison are the key factors to distinguish the two responses and the-->
+<!--            final verdict (i.e., which response is better or tie), and the judgment for single-response evaluation are the critiques and an overall rating.-->
+<!--            These judgments, along with the user query and the responses, constitute our training data.-->
+<!--        In training, we use both the pairwise comparison and single-response data to train Auto-J, so that it can seamlessly toggle between these two evaluation protocols simply by applying the corresponding prompts.-->
+<!--        We also construct new testbeds with a balanced scenario distribution for assessing the effectiveness of different functionalities of Auto-J on pairwise response comparison and single-response evaluation.</p>-->
+        <p>
+            We begin by defining 58 scenarios, which we then condense into 8 major groups.
+            Each scenario is accompanied by a set of manually designed criteria.
+            We collect real-world user queries and responses from various chatbots and categorize the queries using our newly trained scenario classifier.
+            We then employ GPT-4 to generate judgments for both our pairwise data (3,436 samples) and single-response data (960 samples) using the respective scenario criteria as a reference.
+            Specifically, GPT-4 is tasked with providing comprehensive judgments for each data sample, considering both the predefined criteria for each scenario and brainstorming specific points.
+            The judgment for pairwise response comparison contains the key factors in distinguishing between the two responses and the final verdict (i.e., which response is better or if they are tied), while the judgment for single-response evaluation includes critiques and an overall rating.
+            These judgments, together with the user queries and responses, form our training data.
+            During training, we utilize both pairwise comparisons and single-response data to train Auto-J, enabling it to seamlessly switch between these two evaluation protocols by simply applying the appropriate prompts.
+            We also create new testbeds with a balanced distribution on different scenarios to assess Auto-J's effectiveness in pairwise response comparison and single-response evaluation.
+        </p>
     </div>
 </div>
 </div>
 <!-- Methodology -->
 
-
-<div class="columns is-centered has-text-centered" font-size: 18px;
-">
+<!-- Results -->
+<div class="columns is-centered has-text-centered" style = "font-size: 18px;">
 <div class="column is-four-fifths">
     <h1 class="title is-3">Results</h1>
     <div class="content has-text-justified">
         <figure>
-            <img src="./figs/pairwise_performance.png" style="zoom: 40%;" alt="Description of second image">
-            <figcaption>Different models' agreement rate with human preference annotations in the pairwise response comparison task.</figcaption>
+            <img src="./figs/pairwise_performance.png" style="zoom: 38%;" alt="Description of second image">
+            <figcaption>Models' agreement with human preferences in pairwise response comparison.</figcaption>
 
-            <img src="./figs/critique_performance.png" style="zoom: 40%;" alt="Description of second image">
-            <figcaption>Win-rate of Auto-J against other baselines in critique generation tasks, judged by both GPT-4 and humans.</figcaption>
+            <img src="./figs/critique_performance.png" style="zoom: 43%;" alt="Description of second image">
+            <figcaption>Win-rate against baselines in critique generation, judged by GPT-4 and humans.</figcaption>
 
             <img src="./figs/rating_performance.png" style="zoom: 40%;" alt="Description of second image">
-            <figcaption>Auto-J's single-response ratings as reward values to select the best response among N candidates by a base model. The values are GPT-4 ratings for the selected responses.</figcaption>
+            <figcaption>Auto-J's single-response ratings as rewards to select the best response among N candidates by a base model, then use GPT-4 to rate the selected responses.</figcaption>
 
-            <img src="./figs/alpaca_eval_alternative.png" style="zoom: 40%;" alt="Description of second image">
+            <img src="./figs/alpaca_eval_alternative.png" style="zoom: 52%;" alt="Description of second image">
             <figcaption>Reranking the open-source models submitted to <a href="https://tatsu-lab.github.io/alpaca_eval/">AlpacaEval Leaderboard</a> by Auto-J's single-response overall ratings.</figcaption>
         </figure>
 
     </div>
 </div>
 </div>
-
+<!-- Results -->
 
 
 <!-- Leaderboard. -->
@@ -312,10 +238,11 @@
     <div class="column is-four-fifths">
         <h1 class="title is-3">Leaderboard</h1>
         <div class="content has-text-justified">
-            <p>We release the benchmarking results on two tasks: pairwise response comparison leaderboard and critique
-                generation leaderboard.</p>
-            <p>For pairwise comparison task, the metric is the agreement rate with human preference and consistency rate
-                (not applicable for independent/single rating methods) when swapping the order of responses. The results are slightly different from those in our paper as we modify the verdict extraction codes for some models.</p>
+            <p>We present the benchmarking results for two tasks: the pairwise response comparison leaderboard and the critique generation leaderboard.</p>
+            <p>
+                For the pairwise comparison task, the metric evaluates agreement with human preferences and the consistency rate when responses are swapped (not applicable for independent/single rating methods).
+                Results may vary slightly from our paper due to modifications in verdict extraction codes for some models.
+            </p>
             <table border="1" cellspacing="0" cellpadding="5">
                 <thead>
                 <tr>
@@ -444,8 +371,7 @@
                 </tr>
                 </tbody>
             </table>
-            <p>For critique generation task, the metric is the win-rate against critiques generated by a reference model
-                (ChatGPT) judged by GPT-4.</p>
+            <p>In the critique generation task, the metric measures the win-rate against critiques generated by a reference model (ChatGPT) as judged by GPT-4.</p>
             <table border="1" cellspacing="0" cellpadding="5">
                 <thead>
                 <tr>
@@ -513,12 +439,8 @@
     </div>
 </div>
 <!--/ Leaderboard. -->
-
-
-</div>
-
+  </div>
 </section>
-
 
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
