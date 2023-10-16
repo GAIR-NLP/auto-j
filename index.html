@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Generative Judge for Evaluating Alignment">
+    <meta name="keywords" content="LLM, Evaluation, Alignment">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generative Judge for Evaluating Alignment</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/abel.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+    </div>
+
+    </div>
+</nav>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">Generative Judge for Evaluating Alignment</em></h1>
+                    <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=UX7TpSYAAAAJ&hl=zh-CN">Junlong Li</a><sup>1,6</sup>,
+            </span>
+                        <span class="author-block">
+              <a href="https://shichaosun.github.io/">Shichao Sun</a><sup>3,6</sup>,
+            </span>
+                        <span class="author-block">
+              <a href="https://yyy-apple.github.io/">Weizhe Yuan</a><sup>4</sup>,
+            </span>
+                        <span class="author-block">
+              <a href="https://rzfan525.github.io/">Run-Ze Fan</a><sup>5,6</sup>,
+            </span>
+                        <span class="author-block">
+              <a href="https://bcmi.sjtu.edu.cn/home/zhaohai/">Hai Zhao</a><sup>1</sup>,
+            </span>
+                        <span class="author-block">
+              <a href="https://plms.ai/people/index.html">Pengfei Liu</a><sup>1,2,6*</sup>,
+            </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University</span>
+
+                        <span class="author-block"><sup>2</sup>Shanghai Artificial Intelligence Laboratory</span>
+                        <br>
+                        <span class="author-block"><sup>3</sup>Hong Kong Polytechnic University</span>
+
+                        <span class="author-block"><sup>4</sup>New York University</span>
+
+                        <span class="author-block"><sup>5</sup>Chinese Academy of Sciences</span>
+                        <br>
+                        <span class="author-block"><sup>6</sup>Generative Artificial Intelligence Research Lab (GAIR)</span>
+
+                        <span class="author-block"><sup>*</sup>Corresponding Author</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <!-- PDF Link. -->
+                        <span class="link-block">
+                <a href="https://arxiv.org/abs/2310.05470" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                                          <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+                                      </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+                        <!-- Code Link. -->
+                        <span class="link-block">
+                <a href="https://github.com/GAIR-NLP/auto-j" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                                          <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                                      </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section>
+-->
+
+<!--
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<!-- Abstract. -->
+<div class="columns is-centered has-text-centered" font-size: 18px;
+">
+<div class="column is-four-fifths">
+    <h1 class="title is-3">Overview</h1>
+    <div class="content has-text-justified">
+
+
+        <p>We develop <b>Auto-J</b>, a new open-source generative judge that can effectively evaluate different LLMs on
+            how they align to human preference. It is featured with:</p>
+        <ul>
+            <li><b>Generality</b>: Auto-J is trained on data from real-world user queries and responses from various
+                LLMs, covering a wide range of 58 real-world scenarios.
+            </li>
+            <li><b>Flexibility</b>: Auto-J supports both pairwise response comparison and single-response evaluation by
+                just switching to corresponding prompts.
+            </li>
+            <li><b>Interpretability</b>: Auto-J provides detailed natural language critiques that enhance the
+                reliability of its evaluation outcomes and facilitate humans' involvement in the evaluation loop.
+            </li>
+        </ul>
+
+        <!--        <p>Besides the model, we also release other resources:</p>-->
+
+        <!--        <ul>-->
+        <!--            <li>Training data</li>-->
+        <!--            <li>Test data and benchmark</li>-->
+        <!--            <li>Definition and manually designed criteria for scenarios, and a scenario classifier.</li>-->
+        <!--        </ul>-->
+
+        <figure>
+            <img src="./figs/example_pairwise.png" style="zoom: 40%;" alt="Description of first image">
+            <figcaption>Example 1: Compare a pair of responses for a query, with key factors to distinguish them and the
+                final decision.
+            </figcaption>
+        </figure>
+
+        <!-- Second figure -->
+        <figure>
+            <img src="./figs/example_single.png" style="zoom: 40%;" alt="Description of second image">
+            <figcaption>Example 2: Evaluate a single response for a query, with critiques and an overall rating.
+            </figcaption>
+        </figure>
+        </p>
+
+    </div>
+</div>
+</div>
+<!--/ Abstract. -->
+
+<!-- Methodology -->
+<div class="columns is-centered has-text-centered" font-size: 18px;
+">
+<div class="column is-four-fifths">
+    <h1 class="title is-3">Methodology</h1>
+    <div class="content has-text-justified">
+        <figure>
+            <img src="./figs/data_collection_pipeline.png" style="zoom: 40%;" alt="Description of second image">
+        </figure>
+        <p>We first define 58 different scenarios that can be merged into 8 major groups. For each scenario, we also
+            manually design a set of criteria.
+            We collect data from real-world user queries and responses from various chatbots, and classify the queries
+            based on our defined scenarios with the help of our newly-trained scenario classifier.
+        Then we use GPT-4 to generate the judgment for both our pairwise data (3,436 samples) and single-response data (960
+            samples) with the criteria for each scenario as a reference.
+        Specifically, GPT-4 is required to generate a comprehensive judgment for a data sample from two aspects:
+            1) referring to the criteria for each scenario and 2) brainstorming more specific points for this sample.
+            The judgment for pairwise response comparison are the key factors to distinguish the two responses and the
+            final verdict (i.e., which response is better or tie), and the judgment for single-response evaluation are the critiques and an overall rating.
+            These judgments, along with the user query and the responses, constitute our training data.
+        In training, we use both the pairwise comparison and single-response data to train Auto-J, so that it can seamlessly toggle between these two evaluation protocols simply by applying the corresponding prompts.
+        We also construct new testbeds with a balanced scenario distribution for assessing the effectiveness of different functionalities of Auto-J on pairwise response comparison and single-response evaluation.</p>
+    </div>
+</div>
+</div>
+<!-- Methodology -->
+
+
+<div class="columns is-centered has-text-centered" font-size: 18px;
+">
+<div class="column is-four-fifths">
+    <h1 class="title is-3">Results</h1>
+    <div class="content has-text-justified">
+        <figure>
+            <img src="./figs/pairwise_performance.png" style="zoom: 40%;" alt="Description of second image">
+            <figcaption>Different models' agreement rate with human preference annotations in the pairwise response comparison task.</figcaption>
+
+            <img src="./figs/critique_performance.png" style="zoom: 40%;" alt="Description of second image">
+            <figcaption>Win-rate of Auto-J against other baselines in critique generation tasks, judged by both GPT-4 and humans.</figcaption>
+
+            <img src="./figs/rating_performance.png" style="zoom: 40%;" alt="Description of second image">
+            <figcaption>Auto-J's single-response ratings as reward values to select the best response among N candidates by a base model. The values are GPT-4 ratings for the selected responses.</figcaption>
+
+            <img src="./figs/alpaca_eval_alternative.png" style="zoom: 40%;" alt="Description of second image">
+            <figcaption>Reranking the open-source models submitted to <a href="https://tatsu-lab.github.io/alpaca_eval/">AlpacaEval Leaderboard</a> by Auto-J's single-response overall ratings.</figcaption>
+        </figure>
+
+    </div>
+</div>
+</div>
+
+
+
+<!-- Leaderboard. -->
+<div class="columns is-centered has-text-centered" style="font-size: 18px;">
+    <div class="column is-four-fifths">
+        <h1 class="title is-3">Leaderboard</h1>
+        <div class="content has-text-justified">
+            <p>We release the benchmarking results on two tasks: pairwise response comparison leaderboard and critique
+                generation leaderboard.</p>
+            <p>For pairwise comparison task, the metric is the agreement rate with human preference and consistency rate
+                (not applicable for independent/single rating methods) when swapping the order of responses. The results are slightly different from those in our paper as we modify the verdict extraction codes for some models.</p>
+            <table border="1" cellspacing="0" cellpadding="5">
+                <thead>
+                <tr>
+                    <th>Ranking</th>
+                    <th>Model</th>
+                    <th>Type</th>
+                    <th>Generative</th>
+                    <th>Agreement</th>
+                    <th>Consistency</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- I've added all the rows as per your request -->
+                <tr>
+                    <td>1</td>
+                    <td><a href="https://openai.com/research/gpt-4">GPT-4</a></td>
+                    <td>Pairwise</td>
+                    <td>√</td>
+                    <td>62.28</td>
+                    <td>86.28</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="https://huggingface.co/GAIR/autoj-13b">Auto-J</a></td>
+                    <td>Pairwise</td>
+                    <td>√</td>
+                    <td>54.96</td>
+                    <td>83.41</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="https://huggingface.co/fnlp/moss-rlhf-reward-model-7B-en">Moss-RM</a></td>
+                    <td>Single</td>
+                    <td>×</td>
+                    <td>54.31</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-7B-Reward">Ziya-RM</a></td>
+                    <td>Single</td>
+                    <td>×</td>
+                    <td>53.23</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="https://huggingface.co/PKU-Alignment/beaver-7b-v1.0-reward">Beaver-RM</a></td>
+                    <td>Single</td>
+                    <td>×</td>
+                    <td>52.37</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><a href="https://huggingface.co/OpenAssistant/reward-model-deberta-v3-large-v2">OASST-RM</a>
+                    </td>
+                    <td>Single</td>
+                    <td>×</td>
+                    <td>51.08</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><a href="https://huggingface.co/meta-llama/Llama-2-70b-chat-hf">LLaMA-2-70B-Chat</a></td>
+                    <td>Pairwise</td>
+                    <td>√</td>
+                    <td>46.12</td>
+                    <td>69.90</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><a href="https://openai.com/blog/chatgpt">ChatGPT</a></td>
+                    <td>Pairwise</td>
+                    <td>√</td>
+                    <td>42.74</td>
+                    <td>62.43</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><a href="https://www.anthropic.com/index/claude-2">Claude-2</a></td>
+                    <td>Pairwise</td>
+                    <td>√</td>
+                    <td>42.60</td>
+                    <td>63.43</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><a href="https://huggingface.co/stanfordnlp/SteamSHP-flan-t5-xl">SteamSHP</a></td>
+                    <td>Pairwise</td>
+                    <td>√</td>
+                    <td>40.59</td>
+                    <td>65.59</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><a href="https://huggingface.co/WeOpenML/PandaLM-7B-v1">PandaLM</a></td>
+                    <td>Pairwise</td>
+                    <td>√</td>
+                    <td>39.44</td>
+                    <td>66.88</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td><a href="https://huggingface.co/lmsys/vicuna-13b-v1.5">Vicuna-13B-v1.5</a></td>
+                    <td>Pairwise</td>
+                    <td>√</td>
+                    <td>39.22</td>
+                    <td>62.07</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td><a href="https://huggingface.co/WizardLM/WizardLM-13B-V1.2">WizardLM-13B-v1.5</a></td>
+                    <td>Pairwise</td>
+                    <td>√</td>
+                    <td>36.35</td>
+                    <td>57.69</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td><a href="https://huggingface.co/meta-llama/Llama-2-13b-chat-hf">LLaMA-2-13B-Chat</a></td>
+                    <td>Pairwise</td>
+                    <td>√</td>
+                    <td>29.81</td>
+                    <td>48.56</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>For critique generation task, the metric is the win-rate against critiques generated by a reference model
+                (ChatGPT) judged by GPT-4.</p>
+            <table border="1" cellspacing="0" cellpadding="5">
+                <thead>
+                <tr>
+                    <th>Ranking</th>
+                    <th>Model</th>
+                    <th>Win</th>
+                    <th>Tie</th>
+                    <th>Lose</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- I've added all the rows as per your request -->
+                <tr>
+                    <td>1</td>
+                    <td><a href="https://huggingface.co/GAIR/autoj-13b">Auto-J</a></td>
+                    <td>73.7</td>
+                    <td>2.2</td>
+                    <td>24.1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="https://openai.com/research/gpt-4">GPT-4</a></td>
+                    <td>58.2</td>
+                    <td>7.3</td>
+                    <td>34.5</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="https://openai.com/blog/chatgpt">ChatGPT (Reference)</a></td>
+                    <td>50.0</td>
+                    <td>0.0</td>
+                    <td>50.0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="https://huggingface.co/meta-llama/Llama-2-13b-chat-hf">LLaMA-2-13B-Chat</a></td>
+                    <td>47.0</td>
+                    <td>3.9</td>
+                    <td>49.1</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="https://huggingface.co/WizardLM/WizardLM-13B-V1.2">WizardLM-13B-v1.5</a></td>
+                    <td>38.8</td>
+                    <td>7.7</td>
+                    <td>53.5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><a href="https://huggingface.co/lmsys/vicuna-13b-v1.5">Vicuna-13B-v1.5</a></td>
+                    <td>35.4</td>
+                    <td>7.3</td>
+                    <td>57.3</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><a href="https://github.com/kaistAI/SelFee">SelFee</a></td>
+                    <td>12.9</td>
+                    <td>1.7</td>
+                    <td>85.4</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--/ Leaderboard. -->
+
+
+</div>
+
+</section>
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{li2023generative,
+  title={Generative Judge for Evaluating Alignment},
+  author={Li, Junlong and Sun, Shichao and Yuan, Weizhe and Fan, Run-Ze and Zhao, Hai and Liu, Pengfei},
+  journal={arXiv preprint arXiv:2310.05470},
+  year={2023}
+}</code></pre>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="columns is-centered">
+        <div class="column is-8">
+            <div class="content">
+                <p>
+                    This website is licensed under a <a rel="license"
+                                                        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                </p>
+                <p>
+                    This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
+                    code</a> of this website,
+                    we just ask that you link back to this page in the footer.
+                    Please remember to remove the analytics code included in the header of the website which
+                    you do not want on your website.
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+
+</body>
+</html>
