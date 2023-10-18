@@ -49,14 +49,14 @@ We release the benchmarking results on the pairwise response comparison and crit
 
 For **pairwise comparison task**, the metric is the agreement rate with human preference and consistency rate (not applicable for independent rating methods) when swapping the order of responses. For reward models, we manually search the best threshold for "tie" from 0 to 2.0 in a 0.01 interval. (We slight modify the codes to extract verdicts from the text generation, so the values are slightly different from those in our paper.)
 
-| Model                                                                                                                | Type     | Generative | Agreement | Consistency |
-|----------------------------------------------------------------------------------------------------------------------| -------- |--| --------- | ----------- |
+| Model                                                                                                                | Type     | Generative                         | Agreement | Consistency |
+|----------------------------------------------------------------------------------------------------------------------| -------- |------------------------------------| --------- | ----------- |
 | [GPT-4](https://openai.com/research/gpt-4)                                                                           | Pairwise | <span style="color: green;">✔</span> | 62.28     | 86.28       |
 | [Auto-J](https://huggingface.co/GAIR/autoj-13b)                                                                      | Pairwise | <span style="color: green;">✔</span> | 54.96     | 83.41       |
-| [Moss-RM](https://huggingface.co/fnlp/moss-rlhf-reward-model-7B-en)                                                  | Single   | <span style="color: red;">✗</span> | 54.31     | -           |
-| [Ziya-RM](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-7B-Reward)                                                     | Single   | <span style="color: red;">✗</span> | 53.23     | -           |
-| [Beaver-RM](https://huggingface.co/PKU-Alignment/beaver-7b-v1.0-reward)                                              | Single   | <span style="color: red;">✗</span> | 52.37     | -           |
-| [OASST-RM](https://huggingface.co/OpenAssistant/reward-model-deberta-v3-large-v2)                                    | Single   | <span style="color: red;">✗</span> | 51.08     | -           |
+| [Moss-RM](https://huggingface.co/fnlp/moss-rlhf-reward-model-7B-en)                                                  | Single   | <span style="color: red;">×</span> | 54.31     | -           |
+| [Ziya-RM](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-7B-Reward)                                                     | Single   | <span style="color: red;">×</span>  | 53.23     | -           |
+| [Beaver-RM](https://huggingface.co/PKU-Alignment/beaver-7b-v1.0-reward)                                              | Single   | <span style="color: red;">×</span>  | 52.37     | -           |
+| [OASST-RM](https://huggingface.co/OpenAssistant/reward-model-deberta-v3-large-v2)                                    | Single   | <span style="color: red;">×</span> | 51.08     | -           |
 | [LLaMA-2-70B-Chat](https://huggingface.co/meta-llama/Llama-2-70b-chat-hf)                                            | Pairwise | <span style="color: green;">✔</span> | 46.12     | 69.90       |
 | [ChatGPT](https://openai.com/blog/chatgpt)                                                                           | Pairwise | <span style="color: green;">✔</span> | 42.74     | 62.43       |
 | [Claude-2](https://www.anthropic.com/index/claude-2)                                                                 | Pairwise | <span style="color: green;">✔</span> | 42.6      | 63.43       |
