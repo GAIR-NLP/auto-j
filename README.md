@@ -184,6 +184,20 @@ result = extract_pariwise_result(judgment) # `extract_single_rating` for single-
 print(result)
 ```
 
+### 4bits quantized version
+We also provide a 4bits quantized version of Auto-J by using AutoGPTQ, which is available on huggingface-hub: https://huggingface.co/GAIR/autoj-13b-GPTQ-4bits.
+
+To use the 4bits version of Auto-J, you need to install the following packages:
+```js
+pip install safetensors
+pip install transformers>=4.32.0 optimum>=1.12.0
+pip install auto-gptq --extra-index-url https://huggingface.github.io/autogptq-index/whl/cu118/  # Use cu117 if on CUDA 11.7
+```
+
+Then you can find an example code in `codes/usage/example_gptq4bits.py` and use it.
+
+It takes about 8GB VRAM to load this model. Note that the behaviours of the quantized model and the original one might be different.
+
 ## Data
 
 ### Training Data
