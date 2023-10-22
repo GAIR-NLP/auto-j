@@ -22,6 +22,8 @@ We develop **Auto-J**, a new open-source generative judge that can effectively e
 
 ## News
 
+- **Oct 2023**: We release a 4bits quantized version of Auto-J (by GPTQ).
+
 - **Oct 2023**: We release the preprint paper on Arxiv, Auto-J's model weights, data for training and three testing tasks, and other useful resources in developing them (scenario definition, hand written criteria, scenario classifier and its data).
 
 ## Table of contents
