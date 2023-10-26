@@ -277,7 +277,7 @@ where the fields are:
 We also release the two independent critiques in `data/training/single_independent/noscenario.jsonl` (without scenario criteria) and `data/training/single_independent/usescenario.jsonl` (with scenario criteria) (refer to our paper for more details). Each line in these two files looks like:
 
 <details>
-<summary>Format for independent critiques before combinition</summary>
+<summary>Format for independent critiques before combination</summary>
 
  ```python
  {
