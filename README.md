@@ -104,6 +104,8 @@ Auto-J is now available on huggingface-hub:
 | ---------- | ------------------------------------------------------------ | ------- | ------------------------------------------------------------ |
 | Auto-J     | 🤗 <a href="https://huggingface.co/GAIR/autoj-13b" target="_blank">GAIR/autoj-13b</a> | **13B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
 
+* For Chinese users that cannot access huggingface directly, we provide a [modelscope link](https://modelscope.cn/models/lockonlvange/autoj-13b-fp16).
+
 ### Usage
 
 Our implementation is based on [vllm-project/vllm](https://github.com/vllm-project/vllm). A complete example can be found in `codes/example.py`.
@@ -190,6 +192,8 @@ print(result)
 
 ### 4bits quantized version
 We also provide a 4bits quantized version of Auto-J by using AutoGPTQ, which is available on huggingface-hub: https://huggingface.co/GAIR/autoj-13b-GPTQ-4bits.
+
+* For Chinese users that cannot access huggingface directly, we provide a [modelscope link](https://modelscope.cn/models/lockonlvange/autoj-13b-4bits).
 
 To use the 4bits version of Auto-J, you need to install the following packages:
 ```js
