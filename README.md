@@ -182,7 +182,7 @@ def extract_single_rating(score_output):
         pos = score_output.rfind("Rating: [[")
         pos2 = score_output.find("]]", pos)
         assert pos != -1 and pos2 != -1
-        pred_score = float(score_output[pos + len("[["):pos2].strip())
+        pred_score = float(score_output[pos + len("Rating: [["):pos2].strip())
     return pred_score
 
 result = extract_pariwise_result(judgment) # `extract_single_rating` for single-response evaluation 
