@@ -23,7 +23,7 @@ def extract_single_rating(score_output):
         pos = score_output.rfind("Rating: [[")
         pos2 = score_output.find("]]", pos)
         assert pos != -1 and pos2 != -1
-        return float(score_output[pos + len("[["):pos2].strip())
+        return float(score_output[pos + len("Rating: [["):pos2].strip())
     else:
         return 0.0
 
