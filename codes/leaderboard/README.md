@@ -122,7 +122,7 @@ python critique_eval.py \
   --source_file ../../data/test/testdata_critique.jsonl \
   --openai_comparison_file ../../data/outputs/{openai_model}-Eval_{critic_name}_vs_chatgpt.jsonl
 ```
-You may get results like this (using file `../../data/outputs/gpt-4-turbo-Eval_suto-j_vs_chatgpt.jsonl`)):
+You may get results like this (using file `../../data/outputs/gpt-4-turbo-Eval_auto-j_vs_chatgpt.jsonl`)):
 ```text
 Group	Winrate
 ---------------
