@@ -12,6 +12,7 @@ if __name__ == '__main__':
     parser.add_argument("--openai_api", type=str, default=None)
     parser.add_argument("--openai_org", type=str, default=None)
     parser.add_argument("--batch_size", type=int, default=3)
+    parser.add_argument("--language", type=str, default="English")
     parser.add_argument("--fix_mode", action='store_true')
     args = parser.parse_args()
 
@@ -38,6 +39,7 @@ if __name__ == '__main__':
     all_inputs = []
     all_metas = []
 
+    assert args.language in ["English", "Chinese"]
     # prepare inputs for GPT-4 / ChatGPT
     for idx, (a, b, c, d) in enumerate(zip(source, critiques_challenger, critiques_reference, already_have)):
         prompt, response, scenario = a["prompt"], a["response"], a["scenario"]
@@ -54,7 +56,10 @@ if __name__ == '__main__':
 
         all_metas.append({"exchange": exchange_tag, "idx": idx})
 
-        input = critique_eval_prompt.format(prompt=prompt, response=response, feedback1=feedback1, feedback2=feedback2)
+        if args.language == "English":
+            input = critique_eval_prompt.format(prompt=prompt, response=response, feedback1=feedback1,feedback2=feedback2)
+        else:
+            input = zh_critique_eval_prompt.format(prompt=prompt, response=response, feedback1=feedback1, feedback2=feedback2)
 
         all_inputs.append({"usermsg": input})
 

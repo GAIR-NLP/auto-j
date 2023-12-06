@@ -81,6 +81,26 @@ A: Feedback 1 is significantly better.
 B: Feedback 2 is significantly better.
 C: Neither is significantly better."""
 
+zh_critique_eval_prompt = """你是一个乐于助人且回答准确的助手，将要来评估反馈的质量。
+我向你提供了两条针对特定用户问询的相同回答的反馈。就它们的正确性、全面性和与问询的相关性而言，哪一条更好？
+
+[BEGIN DATA]
+***
+[用户问询]: {prompt}
+***
+[回应]: {response}
+***
+[反馈1]: {feedback1}
+***
+[反馈2]: {feedback2}
+***
+[END DATA]
+
+请在以下选项中做出选择，并在这之后的一行给出你的理由
+A:反馈1明显更好
+B:反馈2明显更好
+C:并没有哪条反馈明显更好"""
+
 
 reversed_scenario_group = {
     vv: k for k, v in scenario_group.items() for vv in v
