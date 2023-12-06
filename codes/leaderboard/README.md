@@ -94,7 +94,7 @@ python pairwise_critique_openai_eval.py \
 ```
 You can simply rerun the same command to continue the evaluation if the program is interrupted. It will detect how many comparisons have been done and continue from there.
 
-After that, the comparison results will be stored in `../../data/outputs/gpt-4-Eval_{critic_name}_vs_chatgpt.jsonl`. We provide an example in `../../data/outputs/gpt-4-turbo-Eval_suto-j_vs_chatgpt.jsonl`, which looks like this:
+After that, the comparison results will be stored in `../../data/outputs/gpt-4-Eval_{critic_name}_vs_chatgpt.jsonl`. We provide an example in `../../data/outputs/gpt-4-turbo-Eval_auto-j_vs_chatgpt.jsonl`, which looks like this:
 
 ```json lines
 {"output": "A: Feedback 1 is significantly better. ...", "cost": 0.03564, "finish_reason": "stop", "meta": {"exchange": false}}
