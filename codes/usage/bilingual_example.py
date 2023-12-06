@@ -74,11 +74,11 @@ if __name__ == '__main__':
 
     if args.language == "Chinese":
         # input_single = zh_build_autoj_input(prompt="中国的首都是哪里？",
-        #                                 resp1="中国的首都是上海",
+        #                                 resp1="中国的首都是上海。",
         #                                 protocol="zh_single")
-        input_pairwise = zh_build_autoj_input(prompt="1+0等于几?",
-                                        resp1="1+0等于11",
-                                        resp2="答案是1",
+        input_pairwise = zh_build_autoj_input(prompt="中国的首都是哪里?",
+                                        resp1="中国的首都是北京。",
+                                        resp2="中国的首都是上海。",
                                         protocol="zh_pairwise_tie")
         input = input_pairwise  # or input_single
         # input = input_single
@@ -96,9 +96,9 @@ if __name__ == '__main__':
         print(evaluation_result)
 
     elif args.language == "English":
-        input_pairwise = build_autoj_input(prompt="what is 1+0?",
-                                       resp1="1+0 is 11",
-                                       resp2="the answer is 1",
+        input_pairwise = build_autoj_input(prompt="What's the capital of the United States?",
+                                       resp1="The capital of the United States is New York.",
+                                       resp2="The captical of the United States is Washington DC.",
                                        protocol="pairwise_tie")
 
             # input = input_pairwise  # or input_single
