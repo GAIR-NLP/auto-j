@@ -40,7 +40,7 @@ We develop **Auto-J**, a new open-source generative judge that can effectively e
 
 <center>Example 2: Evaluate a single response for a query, with critiques and an overall rating.</center>
 
-<img src="./figs/example_zh_single.jpg" style="zoom: 25%;" />
+<img src="./figs/example_zh_single.png" style="zoom: 25%;" />
 
 <center>Example 3: Chinese Evaluation</center>
 
