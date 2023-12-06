@@ -2,19 +2,15 @@
 
 This is the official repository for [**Generative Judge for Evaluating Alignment**](https://arxiv.org/abs/2310.05470).
 
-
-
 We develop **Auto-J**, a new open-source generative judge that can effectively evaluate different LLMs on how they align to human preference. It is featured with:
 
 - **Generality**: Auto-J is trained on data from real-world user queries and responses from various LLMs, covering a wide range of 58 real-world scenarios.
-
 - **Flexibility**: Auto-J supports both pairwise response comparison and single-response evaluation by just switching to corresponding prompts.
-
 - **Interpretability**: Auto-J provides detailed natural language critiques that enhance the reliability of its evaluation outcomes and facilitate humans’ involvement in the evaluation loop.
 
 <img src="./figs/example_pairwise.png" style="zoom: 25%;" />
 
-<center>Example 1: Compare a pair of responses for a query, with key factors to distinguish them and the final decision.</center>	
+<center>Example 1: Compare a pair of responses for a query, with key factors to distinguish them and the final decision.</center>
 
 <img src="./figs/example_single.png" style="zoom: 25%;" />
 
@@ -22,8 +18,8 @@ We develop **Auto-J**, a new open-source generative judge that can effectively e
 
 ## News
 
+- **Dec 2023**: We release Autoj-Bilingual-6B that supports both Chinese and English evaluation, along with its test scores and the Chinese translation of original training and test data. You can go to [Chinese&English Bilingual Version](#chinese-english-bilingual-version) for a Quick Start.
 - **Oct 2023**: We release a 4bits quantized version of Auto-J (by GPTQ).
-
 - **Oct 2023**: We release the preprint paper on Arxiv, Auto-J's model weights, data for training and three testing tasks, and other useful resources in developing them (scenario definition, hand written criteria, scenario classifier and its data).
 
 ## Table of contents
@@ -42,23 +38,22 @@ We develop **Auto-J**, a new open-source generative judge that can effectively e
 - [Citation](#citation)
 - [Acknowledgements](#acknowledgements)
 
-
 ## Leaderboard
 
 We release the benchmarking results on the pairwise response comparison and critique generation tasks as a leaderboard. See [./codes/leaderboard/README.md](codes/leaderboard/README.md) for more details.
 
-
-
 For **pairwise comparison task**, the metric is the agreement rate with human preference and consistency rate (not applicable for independent rating methods) when swapping the order of responses. For reward models, we manually search the best threshold for "tie" from 0 to 2.0 in a 0.01 interval. (We slight modify the codes to extract verdicts from the text generation, so the values are slightly different from those in our paper.)
 
-| Model                                                                             | Type     | Generative                           | Agreement | Consistency |
-|-----------------------------------------------------------------------------------| -------- |--------------------------------------| --------- | ----------- |
+| Model                                                                             | Type     | Generative                    | Agreement | Consistency |
+|-----------------------------------------------------------------------------------| -------- |----------------------------------| --------- | ----------- |
 | [GPT-4](https://openai.com/research/gpt-4)                                        | Pairwise | ✔️                                   | 62.28     | 86.28       |
 | [Auto-J (Ours)](https://huggingface.co/GAIR/autoj-13b)                            | Pairwise | ✔️                                   | 54.96     | 83.41       |
 | [Moss-RM](https://huggingface.co/fnlp/moss-rlhf-reward-model-7B-en)               | Single   | ❌                                    | 54.31     | -           |
+| [Auto-J-Bilingual (English) (Ours)](https://huggingface.co/GAIR/autoj-bilingual-6b)                            | Pairwise | ✔️                                   | 53.45     | 81.61       |
 | [Ziya-RM](https://huggingface.co/IDEA-CCNL/Ziya-LLaMA-7B-Reward)                  | Single   | ❌                                    | 53.23     | -           |
 | [Beaver-RM](https://huggingface.co/PKU-Alignment/beaver-7b-v1.0-reward)           | Single   | ❌                                    | 52.37     | -           |
 | [OASST-RM](https://huggingface.co/OpenAssistant/reward-model-deberta-v3-large-v2) | Single   | ❌                                    | 51.08     | -           |
+| [Auto-J-Bilingual (Chinese) (Ours)](https://huggingface.co/GAIR/autoj-13b)                            | Pairwise | ✔️                                   | 49.43     | 77.23       |
 | [LLaMA-2-70B-Chat](https://huggingface.co/meta-llama/Llama-2-70b-chat-hf)         | Pairwise | ✔️ | 46.12     | 69.90       |
 | [ChatGPT](https://openai.com/blog/chatgpt)                                        | Pairwise | ✔️ | 42.74     | 62.43       |
 | [Claude-2](https://www.anthropic.com/index/claude-2)                              | Pairwise | ✔️ | 42.6      | 63.43       |
@@ -68,13 +63,13 @@ For **pairwise comparison task**, the metric is the agreement rate with human pr
 | [WizardLM-13B-v1.5](https://huggingface.co/WizardLM/WizardLM-13B-V1.2)            | Pairwise | ✔️ | 36.35     | 57.69       |
 | [LLaMA-2-13B-Chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf)         | Pairwise | ✔️ | 29.81     | 48.56       |
 
-
-
-For **critique generation task**, the metric is the win-rate against critiques generated by a reference model (ChatGPT) judged by GPT-4. 
+For **critique generation task**, the metric is the win-rate against critiques generated by a reference model (ChatGPT) judged by GPT-4.
 
 | Model                                                                     | Win  | Tie  | Lose |
 |---------------------------------------------------------------------------| ---- | ---- | ---- |
 | [Auto-J (Ours)](https://huggingface.co/GAIR/autoj-13b)                          | 73.7 | 2.2  | 24.1 |
+| [Auto-J-Bilingual (Chinese) (Ours)](https://huggingface.co/GAIR/autoj-bilingual-6b)                          | 66.4 | 0  | 33.6 |
+| [Auto-J-Bilingual (English) (Ours)](https://huggingface.co/GAIR/autoj-bilingual-6b)                          | 65.5 | 0.9  | 33.6 |
 | [GPT-4](https://openai.com/research/gpt-4)                                | 58.2 | 7.3  | 34.5 |
 | [ChatGPT (Reference)](https://openai.com/blog/chatgpt)                    | 50.0 | 0.0  | 50.0 |
 | [LLaMA-2-13B-Chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf) | 47.0 | 3.9  | 49.1 |
@@ -82,13 +77,11 @@ For **critique generation task**, the metric is the win-rate against critiques g
 | [Vicuna-13B-v1.5](https://huggingface.co/lmsys/vicuna-13b-v1.5)           | 35.4 | 7.3  | 57.3 |
 | [SelFee](https://github.com/kaistAI/SelFee)                               | 12.9 | 1.7  | 85.4 |
 
-
 ## Quick Start
 
 ### Setup
 
 We use `python 3.10` in this project. You are encouraged to create a virtual environment through `conda`.
-
 
 Then, we have to install all the libraries listed in `requirements.txt`. Note that you may choose an appropriate version of `torch` according to your CUDA version (we write `torch>=2.0.1+cu118` in this file).
 
@@ -102,7 +95,8 @@ Auto-J is now available on huggingface-hub:
 
 | Model Name | HF Checkpoint                                                | Size    | License                                                      |
 | ---------- | ------------------------------------------------------------ | ------- | ------------------------------------------------------------ |
-| Auto-J     | 🤗 <a href="https://huggingface.co/GAIR/autoj-13b" target="_blank">GAIR/autoj-13b</a> | **13B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
+| Auto-J     | 🤗 GAIR/autoj-13b | **13B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
+| Auto-J-Bilingual    | 🤗 GAIR/autoj-bilingual-6b | **6B** | [Yi License](https://huggingface.co/01-ai/Yi-6B/blob/main/LICENSE) |
 
 * For Chinese users that cannot access huggingface directly, we provide a [modelscope link](https://modelscope.cn/models/lockonlvange/autoj-13b-fp16).
 
@@ -191,11 +185,13 @@ print(result)
 ```
 
 ### 4bits quantized version
+
 We also provide a 4bits quantized version of Auto-J by using AutoGPTQ, which is available on huggingface-hub: https://huggingface.co/GAIR/autoj-13b-GPTQ-4bits.
 
 * For Chinese users that cannot access huggingface directly, we provide a [modelscope link](https://modelscope.cn/models/lockonlvange/autoj-13b-4bits).
 
 To use the 4bits version of Auto-J, you need to install the following packages:
+
 ```js
 pip install safetensors
 pip install transformers>=4.32.0 optimum>=1.12.0
@@ -206,13 +202,28 @@ Then you can find an example code in `codes/usage/example_gptq4bits.py` and use 
 
 It takes about 8GB VRAM to load this model. Note that the behaviours of the quantized model and the original one might be different.
 
+### Chinese&English Bilingual Version
+
+To meet the need of Chinese users, we also provide a bilingual 6B version of Auto-J.  It is trained on both the original training data and its Chinese translation. You can find a complete example of bilingual evaluation implementation in `codes/usage/example_bilingual.py`
+You can run the bilingual example code as follows:
+
+```
+CUDA_VISIBLE_DEVICES=<GPU_ID>  python example_bilingual.py\	
+ -- language "TARGET_LANGUAGE"
+```
+
+You need to replace "TARGET_LANGUAGE" with "Chinese" or "English".
+
+Note that although the current bilingual Auto-J supports convenient and flexible bilingual evaluation, we've found some issues like occasional codeswitch(which means you may see several English words in a Chinese critique) and weakness in mathematical and code ability(such as basic arithmetic abilities). We will keep on improving Auto-J's performance.
 ## Data
 
 ### Training Data
 
-We provide the data for training Auto-J here, which consists of the pairwise part and the single response part. 
+We provide the data for training Auto-J here, which consists of the pairwise part and the single response part.
 
 Our training data covers a wide range of real-world scenarios, and mostly comes from [lmsys/chatbot_arena_conversations · Datasets at Hugging Face](https://huggingface.co/datasets/lmsys/chatbot_arena_conversations) (a dataset of real user queries and responses from deployed LLMs).
+
+We also provide the Chinese translation of the original English training data, using [GPT-3.5-turbo-1106](https://openai.com/blog/new-models-and-developer-products-announced-at-devday) as translation engine.
 
 An overview of data construction pipeline is as follows (Please refer to our paper for more details):
 
@@ -220,7 +231,7 @@ An overview of data construction pipeline is as follows (Please refer to our pap
 
 #### Pairwise part
 
-The pairwise part of training data is in `data/training/pairwise_traindata.jsonl`, which is a reformatted version of GPT-4's raw outputs. It has 3,436 samples, and each line is a python dict with the following format:
+The pairwise part of training data is in `data/training/pairwise_traindata.jsonl` and `data/training/zh_pairwise_traindata.jsonl` , which is a reformatted version of GPT-4's raw outputs. It has 3,436 samples, and each line is a python dict with the following format:
 
 <details>
 <summary>Format for pairwise training data</summary>
@@ -251,7 +262,7 @@ Note that for certain scenarios (the exam group) that needs reasoning, we ask th
 
 #### Single-response part
 
-The single response part of training data is in `data/training/single_traindata.jsonl`, which is the combination of two independent critiques for a response (with and without scenario criteria as a reference in evaluation). It has 960 samples, and each line is a python dict with the following format:
+The single response part of training data is in `data/training/single_traindata.jsonl` and `data/training/zh_single_traindata.jsonl`, which is the combination of two independent critiques for a response (with and without scenario criteria as a reference in evaluation). It has 960 samples, and each line is a python dict with the following format:
 
 <details>
 <summary>Format for single-response training data</summary>
@@ -283,42 +294,44 @@ We also release the two independent critiques in `data/training/single_independe
 <details>
 <summary>Format for independent critiques before combination</summary>
 
- ```python
- {
- 	"output": "The response does not provide a plan for the fifth day of the trip ...",
- 	"cost": 0.0473,
- 	"finish_reason": "stop",
- 	"meta":{
- 		"scenario": "planning",
- 		"protocol": "single",
- 		"prompt": "give me a trip plan for 5 days in France",
- 		"response": "Sure, here's a potential 5-day trip plan for France ...",
- 	}
- }
- ```
+```python
+{
+	"output": "The response does not provide a plan for the fifth day of the trip ...",
+	"cost": 0.0473,
+	"finish_reason": "stop",
+	"meta":{
+		"scenario": "planning",
+		"protocol": "single",
+		"prompt": "give me a trip plan for 5 days in France",
+		"response": "Sure, here's a potential 5-day trip plan for France ...",
+	}
+}
+```
 
 where the fields are:
 
-- *output*: Raw output given by GPT-4, i.e.,  the critiques for this response. 
+- *output*: Raw output given by GPT-4, i.e.,  the critiques for this response.
 - *cost*: The cost of this API call.
 - *finish_reason*: The finish reason for this API call, should be "stop".
 - *meta/scenario*: The scenario that the query of this sample belongs to.
 - *meta/protocol*: "single" or "single_reasoning" (For certain scenarios that need reasoning, we ask the GPT-4 to first give out an independent answer, then give out the critiques.)
 - *meta/prompt*: The query of this sample.
-- *meta/response*: The response of this sample. 
+- *meta/response*: The response of this sample.
 
 </details>
 
 ### Test Data for Three Tasks
 
-We release the test data for the three meta-evaluation tasks introduced in our paper. The data has a balanced distribution over the 58 real-world scenarios, making it a testbed for validating different evaluators' abilities comprehensively. 
+We release the test data for the three meta-evaluation tasks introduced in our paper. The data has a balanced distribution over the 58 real-world scenarios, making it a testbed for validating different evaluators' abilities comprehensively.
+
+We also provide the Chinese translation of the original English test data, using [GPT-3.5-turbo-1106](https://openai.com/blog/new-models-and-developer-products-announced-at-devday) as translation engine.
 
 #### Pairwise response comparison
 
 We collect $58\times24=1392$ samples for the pairwise response comparison task (24 pairs for each scenario). The data is in `data/test/testdata_pairwise.jsonl`. Each line of this file is as follows:
 
 <details>
-<summary>Format</summary>    
+<summary>Format</summary>
 
 ```python
 {
@@ -372,7 +385,7 @@ where the fields are:
 
 #### Best-of-N selection
 
-Based on the data for critique generation task, we construct the data for critique generation task. Specifically, we sample 2 out of the 4 queries for each scenario ($58\times2=116$ samples in total). For each query, we use a base model to generate 32 responses through uniform sampling. 
+Based on the data for critique generation task, we construct the data for critique generation task. Specifically, we sample 2 out of the 4 queries for each scenario ($58\times2=116$ samples in total). For each query, we use a base model to generate 32 responses through uniform sampling.
 
 In our paper we adopt two base models, Vicuna-7B-v1.5 and LLaMA-7B-chat, to generate these responses. The data is in `data/test/testdata_selection.jsonl`, and we also provide the rating for each response by Auto-J in this file. Each line of this file is as follows:
 
@@ -467,7 +480,7 @@ extended:
 
 </details>
 
-where `basic-writing` is the basic and general criteria (they may be inherited by multiple scenarios): 
+where `basic-writing` is the basic and general criteria (they may be inherited by multiple scenarios):
 
 <details>
     <summary>The complete criteria for "basic-writing" scenario.</summary>
@@ -528,7 +541,7 @@ The scenario classifier is now available on huggingface hub.
 
 | Model Name          | HF Checkpoints                                               | Size    | License                                                      |
 | ------------------- | ------------------------------------------------------------ | ------- | ------------------------------------------------------------ |
-| Scenario Classifier | 🤗 <a href="https://huggingface.co/GAIR/autoj-scenario-classifier" target="_blank">GAIR/autoj-scenario-classifier</a> | **13B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
+| Scenario Classifier | 🤗 GAIR/autoj-scenario-classifier | **13B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
 
 **How to use**
 

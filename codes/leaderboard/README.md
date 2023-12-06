@@ -26,6 +26,7 @@ python pairwise_eval.py \
   --pred_file_path your/output/file.jsonl \
   --exchange_pred_file_path your/output/file/for/response/order/swapped.jsonl \
   --type "pairwise" # if "single" you do not need to provide `exchange_pred_file_path`
+  --language "English" #You can also choose "Chinese"
 ```
 
 You will get results like this (using files `../../data/outputs/pairwise_example_output.jsonl` and `../../data/outputs/pairwise_exchange_example_output.jsonl`):
