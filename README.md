@@ -75,7 +75,7 @@ For **critique generation task**, the metric is the win-rate against critiques g
 | Model                                                                     | Win  | Tie  | Lose |
 |---------------------------------------------------------------------------| ---- | ---- | ---- |
 | [Auto-J (Ours)](https://huggingface.co/GAIR/autoj-13b)                          | 73.7 | 2.2  | 24.1 |
-| [Auto-J-Bilingual (Chinese) (Ours)](https://huggingface.co/GAIR/autoj-bilingual-6b)                          | 66.4 | 0  | 33.6 |
+| [Auto-J-Bilingual (Chinese) (Ours)](https://huggingface.co/GAIR/autoj-bilingual-6b)                          | 66.4 | 0.0  | 33.6 |
 | [Auto-J-Bilingual (English) (Ours)](https://huggingface.co/GAIR/autoj-bilingual-6b)                          | 65.5 | 0.9  | 33.6 |
 | [GPT-4](https://openai.com/research/gpt-4)                                | 58.2 | 7.3  | 34.5 |
 | [ChatGPT (Reference)](https://openai.com/blog/chatgpt)                    | 50.0 | 0.0  | 50.0 |
