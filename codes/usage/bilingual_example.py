@@ -98,7 +98,7 @@ if __name__ == '__main__':
     elif args.language == "English":
         input_pairwise = build_autoj_input(prompt="What's the capital of the United States?",
                                        resp1="The capital of the United States is New York.",
-                                       resp2="The captical of the United States is Washington DC.",
+                                       resp2="The captical of the United States is Washington D.C.",
                                        protocol="pairwise_tie")
 
             # input = input_pairwise  # or input_single

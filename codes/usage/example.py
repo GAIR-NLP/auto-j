@@ -34,16 +34,13 @@ if __name__ == '__main__':
     llm = LLM(model=model_name_or_dir, tensor_parallel_size=num_gpus)
     sampling_params = SamplingParams(temperature=0.0, top_p=1.0, max_tokens=1024)
 
-    input_pairwise = build_autoj_input(prompt="what is 1+0?",
-                                       resp1="1+0 is 11",
-                                       resp2="the answer is 1",
+
+    input_pairwise = build_autoj_input(prompt="What's the capital of the United States?",
+                                       resp1="The capital of the United States is New York.",
+                                       resp2="The captical of the United States is Washington D.C.",
                                        protocol="pairwise_tie")  # for pairwise response comparison
-    # input_pairwise = build_autoj_input(prompt="can you briefly introduce Donald Trump to me?",
-    #                                    resp1="Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who served as the 45th president of the United States from 2017 to 2021.",
-    #                                    resp2="Donald Trump is the wife of Joe Biden",
-                                    #    protocol="pairwise_tie")  # for pairwise response comparison
-    input_single = build_autoj_input(prompt="what is 1+0?",
-                                     resp1="1",
+    input_single = build_autoj_input(prompt="What's the capital of the United States?",
+                                     resp1="The capital of the United States is New York",
                                      resp2=None, protocol="single")  # for single response evaluation
 
     input = input_pairwise  # or input_single
