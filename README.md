@@ -359,7 +359,7 @@ where the fields are:
 
 </details>
 
-<img src="figs/pairwise_performance.png" style="zoom:50%;" />
+<img src="figs/pairwise_performance.jpg" style="zoom:50%;" />
 
 #### Critique generation
 
