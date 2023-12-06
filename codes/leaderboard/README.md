@@ -26,7 +26,6 @@ python pairwise_eval.py \
   --pred_file_path your/output/file.jsonl \
   --exchange_pred_file_path your/output/file/for/response/order/swapped.jsonl \
   --type "pairwise" # if "single" you do not need to provide `exchange_pred_file_path`
-  --language "English" #You can also choose "Chinese"
 ```
 
 You will get results like this (using files `../../data/outputs/pairwise_example_output.jsonl` and `../../data/outputs/pairwise_exchange_example_output.jsonl`):
@@ -90,6 +89,7 @@ python pairwise_critique_openai_eval.py \
   --reference_file ../../data/test/reference_chatgpt_critique.jsonl \
   --openai_api "your-openai-key" \
   --openai_org "your-openai_org-code (you can remove this line if you do not need to assign a specific organization)" \
+  --language "English" #You can also choose "Chinese"
   --batch_size 3
 ```
 You can simply rerun the same command to continue the evaluation if the program is interrupted. It will detect how many comparisons have been done and continue from there.
