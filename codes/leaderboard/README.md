@@ -89,8 +89,8 @@ python pairwise_critique_openai_eval.py \
   --reference_file ../../data/test/reference_chatgpt_critique.jsonl \
   --openai_api "your-openai-key" \
   --openai_org "your-openai_org-code (you can remove this line if you do not need to assign a specific organization)" \
-  --language "English" #You can also choose "Chinese"
   --batch_size 3
+  --language "English" #You can also choose "Chinese"
 ```
 You can simply rerun the same command to continue the evaluation if the program is interrupted. It will detect how many comparisons have been done and continue from there.
 
