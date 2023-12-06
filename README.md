@@ -2,6 +2,30 @@
 
 This is the official repository for [**Generative Judge for Evaluating Alignment**](https://arxiv.org/abs/2310.05470).
 
+## News
+
+- **Dec 2023**: We release Autoj-Bilingual-6B that supports both Chinese and English evaluation, along with its test scores and the Chinese translation of original training and test data. You can go to [Chinese&English Bilingual Version](#chineseenglish-bilingual-version) for a Quick Start.
+- **Oct 2023**: We release a 4bits quantized version of Auto-J (by GPTQ).
+- **Oct 2023**: We release the preprint paper on Arxiv, Auto-J's model weights, data for training and three testing tasks, and other useful resources in developing them (scenario definition, hand written criteria, scenario classifier and its data).
+
+## Table of contents
+
+- [Introduction](#Introduction)
+- [Leaderboard](#leaderboard)
+- [Quick Start](#quick-start)
+  - [Setup](#setup)
+  - [Model](#model)
+  - [Usage](#usage)
+- [Data](#data)
+  - [Training Data](#training-data)
+  - [Test Data for Three Tasks](#test-data-for-three-tasks)
+- [Other Resources](#other-resources)
+  - [Scenarios: Definition and Criteria](#scenarios)
+  - [Scenario Classifier: Model and Data](#scenario-classifier)
+- [Citation](#citation)
+- [Acknowledgements](#acknowledgements)
+
+## Introduction
 We develop **Auto-J**, a new open-source generative judge that can effectively evaluate different LLMs on how they align to human preference. It is featured with:
 
 - **Generality**: Auto-J is trained on data from real-world user queries and responses from various LLMs, covering a wide range of 58 real-world scenarios.
@@ -16,27 +40,10 @@ We develop **Auto-J**, a new open-source generative judge that can effectively e
 
 <center>Example 2: Evaluate a single response for a query, with critiques and an overall rating.</center>
 
-## News
+<img src="./figs/example_zh_single.jpg" style="zoom: 25%;" />
 
-- **Dec 2023**: We release Autoj-Bilingual-6B that supports both Chinese and English evaluation, along with its test scores and the Chinese translation of original training and test data. You can go to [Chinese&English Bilingual Version](#chineseenglish-bilingual-version) for a Quick Start.
-- **Oct 2023**: We release a 4bits quantized version of Auto-J (by GPTQ).
-- **Oct 2023**: We release the preprint paper on Arxiv, Auto-J's model weights, data for training and three testing tasks, and other useful resources in developing them (scenario definition, hand written criteria, scenario classifier and its data).
+<center>Example 3: Chinese Evaluation</center>
 
-## Table of contents
-
-- [Leaderboard](#leaderboard)
-- [Quick Start](#quick-start)
-  - [Setup](#setup)
-  - [Model](#model)
-  - [Usage](#usage)
-- [Data](#data)
-  - [Training Data](#training-data)
-  - [Test Data for Three Tasks](#test-data-for-three-tasks)
-- [Other Resources](#other-resources)
-  - [Scenarios: Definition and Criteria](#scenarios)
-  - [Scenario Classifier: Model and Data](#scenario-classifier)
-- [Citation](#citation)
-- [Acknowledgements](#acknowledgements)
 
 ## Leaderboard
 
