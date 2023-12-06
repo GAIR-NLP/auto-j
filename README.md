@@ -18,7 +18,7 @@ We develop **Auto-J**, a new open-source generative judge that can effectively e
 
 ## News
 
-- **Dec 2023**: We release Autoj-Bilingual-6B that supports both Chinese and English evaluation, along with its test scores and the Chinese translation of original training and test data. You can go to [Chinese&English Bilingual Version](#chinese-english-bilingual-version) for a Quick Start.
+- **Dec 2023**: We release Autoj-Bilingual-6B that supports both Chinese and English evaluation, along with its test scores and the Chinese translation of original training and test data. You can go to [Chinese&English Bilingual Version](#chineseenglish-bilingual-version) for a Quick Start.
 - **Oct 2023**: We release a 4bits quantized version of Auto-J (by GPTQ).
 - **Oct 2023**: We release the preprint paper on Arxiv, Auto-J's model weights, data for training and three testing tasks, and other useful resources in developing them (scenario definition, hand written criteria, scenario classifier and its data).
 
@@ -95,8 +95,8 @@ Auto-J is now available on huggingface-hub:
 
 | Model Name | HF Checkpoint                                                | Size    | License                                                      |
 | ---------- | ------------------------------------------------------------ | ------- | ------------------------------------------------------------ |
-| Auto-J     | 🤗 GAIR/autoj-13b | **13B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
-| Auto-J-Bilingual    | 🤗 GAIR/autoj-bilingual-6b | **6B** | [Yi License](https://huggingface.co/01-ai/Yi-6B/blob/main/LICENSE) |
+| Auto-J     | [🤗 GAIR/autoj-13b](https://huggingface.co/GAIR/autoj-13b) | **13B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
+| Auto-J-Bilingual    |[🤗 GAIR/autoj-bilingual-6b](https://huggingface.co/GAIR/autoj-bilingual-6b) | **6B** | [Yi License](https://huggingface.co/01-ai/Yi-6B/blob/main/LICENSE) |
 
 * For Chinese users that cannot access huggingface directly, we provide a [modelscope link](https://modelscope.cn/models/lockonlvange/autoj-13b-fp16).
 
@@ -541,7 +541,7 @@ The scenario classifier is now available on huggingface hub.
 
 | Model Name          | HF Checkpoints                                               | Size    | License                                                      |
 | ------------------- | ------------------------------------------------------------ | ------- | ------------------------------------------------------------ |
-| Scenario Classifier | 🤗 GAIR/autoj-scenario-classifier | **13B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
+| Scenario Classifier | [🤗 GAIR/autoj-scenario-classifier](https://huggingface.co/GAIR/autoj-scenario-classifier) | **13B** | [Llama 2](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) |
 
 **How to use**
 
