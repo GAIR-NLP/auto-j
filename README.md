@@ -598,7 +598,7 @@ The test data is in `other_resources/scenario_classifier_data/testdata.jsonl` wi
 
 ## Citation
 
-Please cite the repo or the paper if the model/code/conclusion in this repo is helpful to you.
+Please cite the repo or the paper if the model/code/resource/conclusion in this repo is helpful to you.
 
 ```
 @article{li2023generative,
