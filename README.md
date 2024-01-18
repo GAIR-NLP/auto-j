@@ -4,6 +4,7 @@ This is the official repository for [**Generative Judge for Evaluating Alignment
 
 ## News
 
+- **Jan 2024**: Our paper has been accepted by ICLR 2024! 🎉
 - **Dec 2023**: We release Autoj-Bilingual-6B that supports both Chinese and English evaluation, along with its test scores and the Chinese translation of original training and test data. You can go to [Chinese&English Bilingual Version](#chineseenglish-bilingual-version) for a Quick Start.
 - **Oct 2023**: We release a 4bits quantized version of Auto-J (by GPTQ).
 - **Oct 2023**: We release the preprint paper on Arxiv, Auto-J's model weights, data for training and three testing tasks, and other useful resources in developing them (scenario definition, hand written criteria, scenario classifier and its data).
